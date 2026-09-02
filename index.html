@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AuraPvP — Sfida dal vivo. Farma Aura.</title>
+  <meta name="description" content="AuraPvP porta le Aura Battle nel mondo reale: sfide dal vivo, pubblico verificato e classifiche basate sui risultati.">
+  <meta name="theme-color" content="#08070d">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://aurapvp.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="AuraPvP">
+  <meta property="og:title" content="AuraPvP — Sfida dal vivo. Farma Aura.">
+  <meta property="og:description" content="Due persone. Un luogo reale. Il pubblico presente decide chi ha farmato più Aura.">
+  <meta property="og:url" content="https://aurapvp.app/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AuraPvP — Sfida dal vivo. Farma Aura.">
+  <meta name="twitter:description" content="Le Aura Battle diventano reali.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <header class="site-header" data-header>
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="AuraPvP, torna all'inizio">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Aura<span>PvP</span></span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
+        <span class="sr-only">Apri il menu</span>
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigazione principale" data-nav>
+        <a href="#come-funziona">Come funziona</a>
+        <a href="#battaglia">La battaglia</a>
+        <a href="#classifiche">Classifiche</a>
+        <a href="#piani">Piani</a>
+        <a class="nav-cta" href="#in-arrivo">In arrivo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span></span> Aura Battle, nel mondo reale</div>
+          <h1>Entra.<br> Sfida.<br><em>Farma Aura.</em></h1>
+          <p class="hero-lede">Due persone si incontrano dal vivo. Il pubblico realmente presente guarda, vota e decide chi ha lasciato il segno.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#come-funziona">Scopri come funziona <span aria-hidden="true">↘</span></a>
+            <a class="button button-ghost" href="#piani">Vedi i piani</a>
+          </div>
+          <ul class="trust-row" aria-label="Caratteristiche principali">
+            <li><span class="trust-icon">●</span> Dal vivo</li>
+            <li><span class="trust-icon">⌖</span> Presenza verificata</li>
+            <li><span class="trust-icon">∞</span> Pubblico illimitato</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Anteprima di una battaglia AuraPvP">
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="floating-chip chip-live"><span></span> LIVE</div>
+          <div class="floating-chip chip-crowd">18 <small>presenti</small></div>
+
+          <div class="phone-shell">
+            <div class="phone-top"><span>19:42</span><span class="phone-island"></span><span>●●●</span></div>
+            <div class="battle-head">
+              <div>
+                <span class="micro-label">Roma · Piazza del Popolo</span>
+                <strong>Battaglia in corso</strong>
+              </div>
+              <div class="live-dot"><i></i> LIVE</div>
+            </div>
+
+            <div class="fighters">
+              <article class="fighter fighter-one">
+                <div class="avatar avatar-one"><span>AL</span></div>
+                <h3>Alessio</h3>
+                <p>Oro II · 1.482</p>
+              </article>
+              <div class="versus"><span>VS</span></div>
+              <article class="fighter fighter-two">
+                <div class="avatar avatar-two"><span>MK</span></div>
+                <h3>Mark</h3>
+                <p>Oro I · 1.521</p>
+              </article>
+            </div>
+
+            <div class="timer-card">
+              <span class="micro-label">Tempo rimanente</span>
+              <strong>04:38</strong>
+              <div class="timer-track"><i></i></div>
+              <div class="timer-meta"><span>Inizio 19:35</span><span>Durata 12 min</span></div>
+            </div>
+
+            <div class="crowd-card">
+              <div class="crowd-icon" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div><strong>18 spettatori verificati</strong><small>Pubblico minimo raggiunto</small></div>
+              <span class="verified">✓</span>
+            </div>
+
+            <div class="vote-preview">
+              <small>Il voto si apre alla fine</small>
+              <p>Chi ha farmato più Aura?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signal-strip" aria-label="Principi AuraPvP">
+      <div class="marquee-track">
+        <span>SOLO CHI C'È PUÒ VOTARE</span><i>✦</i>
+        <span>SFIDE UNO CONTRO UNO</span><i>✦</i>
+        <span>LUOGHI PUBBLICI</span><i>✦</i>
+        <span>AURA REALE</span><i>✦</i>
+        <span aria-hidden="true">SOLO CHI C'È PUÒ VOTARE</span><i aria-hidden="true">✦</i>
+        <span aria-hidden="true">SFIDE UNO CONTRO UNO</span><i aria-hidden="true">✦</i>
+      </div>
+    </section>
+
+    <section class="section how" id="come-funziona">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Come funziona</span>
+          <h2>La città è la tua arena.</h2>
+          <p>Niente filtri, giudici nascosti o voti da casa. Una sfida esiste davvero solo quando partecipanti e pubblico sono lì.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <div class="step-number">01</div>
+            <div class="step-icon icon-challenge" aria-hidden="true"><span></span><span></span><i>VS</i></div>
+            <h3>Lancia la sfida</h3>
+            <p>Proponi tre luoghi pubblici, tre date e tre durate. Il tuo avversario sceglie la combinazione e accetta.</p>
+            <span class="step-tag">1 contro 1</span>
+          </article>
+
+          <article class="step-card step-featured reveal">
+            <div class="step-number">02</div>
+            <div class="step-icon icon-presence" aria-hidden="true"><span></span><i></i></div>
+            <h3>Presentati dal vivo</h3>
+            <p>Il check-in conferma partecipanti e spettatori sul posto. La presenza resta privata e viene mostrata solo in forma aggregata.</p>
+            <span class="step-tag">GPS verificato</span>
+          </article>
+
+          <article class="step-card reveal">
+            <div class="step-number">03</div>
+            <div class="step-icon icon-vote" aria-hidden="true"><span>?</span><i></i></div>
+            <h3>Lascia parlare il pubblico</h3>
+            <p>Finita la battaglia, chi è rimasto presente vota una sola volta. Il risultato appare soltanto alla chiusura.</p>
+            <span class="step-tag">Voto anonimo</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section battle-section" id="battaglia">
+      <div class="container battle-layout">
+        <div class="battle-copy reveal">
+          <span class="section-kicker">Una battaglia valida</span>
+          <h2>Non basta esserci.<br><em>Deve esserci il pubblico.</em></h2>
+          <p>Ogni incontro segue regole trasparenti. Se manca anche una condizione, il risultato resta nello storico ma non modifica Aura o classifiche.</p>
+
+          <div class="requirements">
+            <div><span>10+</span><p>spettatori verificati, esclusi i partecipanti</p></div>
+            <div><span>8+</span><p>voti validi alla chiusura</p></div>
+            <div><span>70%</span><p>presenza minima per poter votare</p></div>
+            <div><span>60′</span><p>di visibilità pubblica prima dell'inizio</p></div>
+          </div>
+        </div>
+
+        <div class="battle-flow reveal">
+          <div class="flow-line" aria-hidden="true"></div>
+          <article class="flow-item done">
+            <span class="flow-status">✓</span>
+            <div><small>18:50</small><h3>Check-in aperto</h3><p>Partecipanti e pubblico confermano la presenza.</p></div>
+          </article>
+          <article class="flow-item done">
+            <span class="flow-status">✓</span>
+            <div><small>19:00</small><h3>Battaglia iniziata</h3><p>Nessun voto, nessun risultato parziale.</p></div>
+          </article>
+          <article class="flow-item active">
+            <span class="flow-status">●</span>
+            <div><small>19:12</small><h3>Votazione aperta</h3><p>Una finestra breve, una sola scelta.</p></div>
+          </article>
+          <article class="flow-item">
+            <span class="flow-status">4</span>
+            <div><small>19:13</small><h3>Risultato e Aura</h3><p>Rating, Aura Farmed, lega e classifica si aggiornano.</p></div>
+          </article>
+
+          <div class="vote-card">
+            <span class="micro-label">Domanda ufficiale</span>
+            <blockquote>“Chi ha farmato più Aura?”</blockquote>
+            <div><button type="button" disabled>Alessio</button><span>oppure</span><button type="button" disabled>Mark</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ratings" id="classifiche">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="section-kicker">Due numeri, due storie</span>
+          <h2>Costruisci la tua Aura.</h2>
+          <p>La competizione misura il momento. La storia ricorda tutto il percorso.</p>
+        </div>
+
+        <div class="rating-grid">
+          <article class="rating-card rating-competitive reveal">
+            <div class="rating-top"><span class="rating-symbol">↗</span><span class="pill">Competitivo</span></div>
+            <h3>Aura Rating</h3>
+            <p>Sale o scende in base a risultato, avversario, percentuale dei voti e pubblico verificato.</p>
+            <div class="rating-value"><strong>1.842</strong><span>+31</span></div>
+            <div class="league-progress"><i></i></div>
+            <div class="league-labels"><span>Platino II</span><span>Platino I</span></div>
+          </article>
+
+          <article class="rating-card rating-history reveal">
+            <div class="rating-top"><span class="rating-symbol">✦</span><span class="pill">Storico</span></div>
+            <h3>Aura Farmed</h3>
+            <p>Il totale dell'Aura raccolta nel tempo. Racconta voti, pubblico e attività e non diminuisce mai.</p>
+            <div class="rating-value"><strong>12.670</strong><span>all time</span></div>
+            <div class="sparkline" aria-hidden="true">
+              <svg viewBox="0 0 300 72" role="img"><path d="M2 61 C30 59,42 42,66 46 S105 59,125 32 S159 24,178 35 S210 42,226 18 S268 9,298 4"/><path class="spark-fill" d="M2 61 C30 59,42 42,66 46 S105 59,125 32 S159 24,178 35 S210 42,226 18 S268 9,298 4 L298 72 L2 72 Z"/></svg>
+            </div>
+          </article>
+        </div>
+
+        <div class="leagues reveal" aria-label="Leghe AuraPvP">
+          <div class="league league-bronze"><i></i><span>Bronzo</span></div>
+          <div class="league league-silver"><i></i><span>Argento</span></div>
+          <div class="league league-gold"><i></i><span>Oro</span></div>
+          <div class="league league-platinum"><i></i><span>Platino</span></div>
+          <div class="league league-diamond"><i></i><span>Diamante</span></div>
+          <div class="league league-master"><i></i><span>Master</span></div>
+          <div class="league league-legend"><i></i><span>Aura Legend</span></div>
+        </div>
+
+        <div class="ranking-banner reveal">
+          <div><span class="section-kicker">Dove arrivi?</span><h3>Dalla tua zona alla classifica globale.</h3></div>
+          <div class="ranking-places" aria-label="Ambiti delle classifiche"><span>Zona</span><span>Città</span><span>Regione</span><span>Italia</span><span>Globale</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fair-section">
+      <div class="container fair-layout">
+        <div class="fair-visual reveal" aria-hidden="true">
+          <div class="shield-rings"><span></span><span></span><span></span><i>✓</i></div>
+          <div class="shield-label label-one">No voti da casa</div>
+          <div class="shield-label label-two">No pay-to-win</div>
+          <div class="shield-label label-three">Posizione privata</div>
+        </div>
+        <div class="fair-copy reveal">
+          <span class="section-kicker">Competizione pulita</span>
+          <h2>L'Aura si guadagna.<br>Non si compra.</h2>
+          <p>Il piano non rende un voto più importante e non vende vittorie, boost o protezioni dalla perdita di Rating.</p>
+          <ul class="check-list">
+            <li><span>✓</span> I partecipanti non possono votare</li>
+            <li><span>✓</span> I singoli voti restano anonimi</li>
+            <li><span>✓</span> Luoghi pubblici e verificati</li>
+            <li><span>✓</span> Controlli contro anomalie e manipolazioni</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section plans" id="piani">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="section-kicker">Piani iniziali</span>
+          <h2>Il pubblico non ha limiti.</h2>
+          <p>Tutti possono vedere, seguire e votare gratis. I piani cambiano quante battaglie puoi organizzare o accettare e il livello delle statistiche.</p>
+        </div>
+
+        <div class="plans-grid">
+          <article class="plan-card reveal">
+            <span class="plan-name">Free</span>
+            <div class="plan-price"><strong>0 €</strong><small>per sempre</small></div>
+            <p>Per entrare nell'arena e iniziare a costruire il tuo profilo.</p>
+            <ul>
+              <li><span>✓</span> 2 battaglie organizzate / mese</li>
+              <li><span>✓</span> 2 battaglie accettate / mese</li>
+              <li><span>✓</span> Statistiche essenziali</li>
+              <li><span>✓</span> Card risultato standard</li>
+              <li><span>✓</span> Spettatori e voti illimitati</li>
+            </ul>
+            <a class="button button-plan" href="#in-arrivo">In arrivo</a>
+          </article>
+
+          <article class="plan-card plan-popular reveal">
+            <span class="popular-label">Più flessibilità</span>
+            <span class="plan-name">Base</span>
+            <div class="plan-price"><strong>2,99 €</strong><small>al mese</small></div>
+            <p>Per chi vuole più sfide, più dati e card senza watermark.</p>
+            <ul>
+              <li><span>✓</span> 3 battaglie organizzate / mese</li>
+              <li><span>✓</span> 3 battaglie accettate / mese</li>
+              <li><span>✓</span> Statistiche avanzate</li>
+              <li><span>✓</span> Click social mensili complessivi</li>
+              <li><span>✓</span> Riporto di 1+1 crediti</li>
+            </ul>
+            <a class="button button-primary" href="#in-arrivo">In arrivo</a>
+          </article>
+
+          <article class="plan-card reveal">
+            <span class="plan-name">Pro</span>
+            <div class="plan-price"><strong>5,99 €</strong><small>al mese</small></div>
+            <p>Per chi vive la competizione e vuole leggere ogni dettaglio.</p>
+            <ul>
+              <li><span>✓</span> 6 battaglie organizzate / mese</li>
+              <li><span>✓</span> 6 battaglie accettate / mese</li>
+              <li><span>✓</span> Statistiche complete</li>
+              <li><span>✓</span> Card animate e personalizzabili</li>
+              <li><span>✓</span> Riporto di 2+2 crediti</li>
+            </ul>
+            <a class="button button-plan" href="#in-arrivo">In arrivo</a>
+          </article>
+        </div>
+        <p class="price-note reveal">Prezzi di lancio previsti, modificabili prima della disponibilità del servizio. Nessun acquisto è attualmente disponibile.</p>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container faq-layout">
+        <div class="faq-intro reveal">
+          <span class="section-kicker">Domande frequenti</span>
+          <h2>Prima di scendere in campo.</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>È una gara di bellezza?<span>+</span></summary>
+            <p>No. AuraPvP mette al centro presenza, stile, sicurezza, performance e capacità di coinvolgere il pubblico durante un incontro dal vivo.</p>
+          </details>
+          <details>
+            <summary>Posso votare da casa?<span>+</span></summary>
+            <p>No. Può votare solo chi ha effettuato il check-in, è rimasto nella zona valida per almeno il 70% della battaglia ed è ancora presente all'apertura del voto.</p>
+          </details>
+          <details>
+            <summary>La mia posizione è visibile agli altri?<span>+</span></summary>
+            <p>No. La posizione serve soltanto a verificare la presenza relativa all'evento. Gli altri vedono esclusivamente conteggi aggregati.</p>
+          </details>
+          <details>
+            <summary>Pagare aumenta l'Aura ottenuta?<span>+</span></summary>
+            <p>No. I piani aggiungono crediti battaglia, statistiche e opzioni di condivisione, ma non alterano il peso dei voti o il risultato competitivo.</p>
+          </details>
+          <details>
+            <summary>Cosa succede se non si raggiunge il pubblico minimo?<span>+</span></summary>
+            <p>La battaglia può concludersi e restare nello storico, ma viene indicata come non valida e non modifica Rating, Aura Farmed, lega o classifica.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="in-arrivo">
+      <div class="cta-grid" aria-hidden="true"></div>
+      <div class="container cta-content reveal">
+        <div class="aura-emblem" aria-hidden="true"><span></span><span></span><span></span><i>AP</i></div>
+        <span class="section-kicker">In sviluppo</span>
+        <h2>La tua prossima sfida<br>non sarà dietro uno schermo.</h2>
+        <p>AuraPvP arriverà su iOS e Android. Questa è solo l'entrata dell'arena.</p>
+        <div class="coming-platforms" aria-label="Piattaforme previste"><span>iOS</span><i></i><span>Android</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <a class="brand" href="#top" aria-label="AuraPvP"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Aura<span>PvP</span></span></a>
+      <p>Aura Battle dal vivo. Presenza reale. Voti verificati.</p>
+      <nav aria-label="Link legali"><a href="/privacy/">Privacy</a><a href="/cookies/">Cookie</a></nav>
+    </div>
+    <div class="container footer-bottom"><span>© <span data-year></span> AuraPvP</span><span>Prodotto in sviluppo · Italia</span></div>
+  </footer>
+</body>
+</html>
