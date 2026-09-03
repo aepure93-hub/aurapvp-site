@@ -3,6 +3,7 @@
   const menuButton = document.querySelector('[data-menu-button]');
   const nav = document.querySelector('[data-nav]');
   const year = document.querySelector('[data-year]');
+  const languagePickers = document.querySelectorAll('[data-language-picker]');
 
   const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 18);
   updateHeader();
@@ -53,5 +54,26 @@
         if (other !== item) other.open = false;
       });
     });
+  });
+
+  document.querySelectorAll('[data-language]').forEach((link) => {
+    link.addEventListener('click', () => {
+      try {
+        localStorage.setItem('aurapvp-language', link.dataset.language);
+      } catch {
+        // Language selection still works when storage is unavailable.
+      }
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    languagePickers.forEach((picker) => {
+      if (!picker.contains(event.target)) picker.removeAttribute('open');
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    languagePickers.forEach((picker) => picker.removeAttribute('open'));
   });
 })();

@@ -1,6 +1,7 @@
 .legal-page { min-height: 100vh; background: radial-gradient(circle at 80% 0, rgba(155,92,255,.14), transparent 30%), #08070d; }
 .legal-header { border-bottom: 1px solid rgba(255,255,255,.09); }
 .legal-header .nav-wrap { min-height: 78px; }
+.legal-actions { display: flex; align-items: center; gap: 18px; }
 .back-link { color: #b8b1c1; font-size: 13px; font-weight: 700; }
 .back-link:hover { color: #fff; }
 .legal-main { width: min(780px, calc(100% - 32px)); margin: 0 auto; padding: 95px 0 110px; }
@@ -14,4 +15,4 @@
 .legal-note strong { color: var(--acid); }
 .legal-footer { padding: 25px 0; border-top: 1px solid rgba(255,255,255,.09); color: #716a78; font-size: 11px; }
 .legal-footer .container { display: flex; justify-content: space-between; gap: 15px; }
-@media (max-width: 520px) { .legal-main { padding-top: 70px; }.legal-header .brand-logo--horizontal { height: 29px; }.back-link { font-size: 11px; }.legal-footer .container { flex-direction: column; } }
+@media (max-width: 520px) { .legal-main { padding-top: 70px; }.legal-header .brand-logo--horizontal { height: 29px; }.legal-actions { gap: 8px; }.back-link { display: none; }.legal-footer .container { flex-direction: column; } }

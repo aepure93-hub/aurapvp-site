@@ -53,6 +53,19 @@ button, input { font: inherit; }
 .site-nav a:not(.nav-cta) { transition: color .2s; }
 .site-nav a:not(.nav-cta):hover { color: #fff; }
 .nav-cta { padding: 11px 17px; border: 1px solid rgba(217, 255, 95, .55); border-radius: 999px; color: var(--acid); background: rgba(217, 255, 95, .07); }
+.header-controls { display: flex; align-items: center; gap: 10px; }
+.language-picker { position: relative; color: #eee9f6; }
+.language-picker summary { min-width: 76px; height: 43px; padding: 0 12px; border: 1px solid var(--line); border-radius: 13px; display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(255,255,255,.045); cursor: pointer; list-style: none; font-size: 11px; font-weight: 900; letter-spacing: .7px; }
+.language-picker summary::-webkit-details-marker { display: none; }
+.language-picker summary:hover, .language-picker[open] summary { border-color: rgba(155,92,255,.55); background: rgba(155,92,255,.1); }
+.language-flag { font-size: 17px; line-height: 1; }
+.language-chevron { color: #8e8798; font-size: 12px; transition: transform .2s ease; }
+.language-picker[open] .language-chevron { transform: rotate(180deg); }
+.language-menu { position: absolute; z-index: 120; top: calc(100% + 10px); right: 0; min-width: 205px; padding: 8px; border: 1px solid var(--line); border-radius: 16px; background: rgba(14,12,20,.98); box-shadow: 0 20px 55px rgba(0,0,0,.45); backdrop-filter: blur(18px); }
+.language-menu a { padding: 10px 11px; border-radius: 10px; display: grid; grid-template-columns: 25px 1fr auto; align-items: center; gap: 9px; color: #bbb4c5; font-size: 12px; font-weight: 750; }
+.language-menu a:hover { color: #fff; background: rgba(255,255,255,.06); }
+.language-menu a[aria-current="page"] { color: var(--acid); background: rgba(217,255,95,.07); }
+.language-menu a[aria-current="page"]::after { content: "✓"; font-size: 10px; }
 .menu-button { display: none; width: 44px; height: 44px; border: 0; border-radius: 13px; background: rgba(255,255,255,.06); }
 .menu-button > span:not(.sr-only) { display: block; width: 20px; height: 2px; margin: 5px auto; background: white; transition: transform .2s; }
 
@@ -261,6 +274,8 @@ button, input { font: inherit; }
   html { scroll-padding-top: 72px; }
   .container { width: min(100% - 30px, 680px); }
   .nav-wrap { min-height: 70px; }
+  .nav-wrap { gap: 12px; }
+  .header-controls { margin-left: auto; }
   .menu-button { display: block; color: white; }
   .menu-button[aria-expanded="true"] > span:nth-last-child(2) { transform: translateY(3.5px) rotate(45deg); }
   .menu-button[aria-expanded="true"] > span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
@@ -311,6 +326,8 @@ button, input { font: inherit; }
   .plan-card { padding: 25px; }.plan-price strong { font-size: 37px; }
   .final-cta { min-height: 580px; }.cta-content h2 { font-size: clamp(43px, 13vw, 61px); letter-spacing: -3px; }
   .brand-logo--horizontal { height: 31px; }.brand-logo--wordmark { height: 28px; }.cta-brand-icon { width: 94px; height: 94px; }
+  .language-picker summary { min-width: 61px; padding-inline: 9px; }
+  .language-name-short { display: none; }
   .footer-top { min-height: 105px; }.footer-top nav { gap: 12px; }.footer-bottom { align-items: flex-start; flex-direction: column; justify-content: center; gap: 5px; }
 }
 
