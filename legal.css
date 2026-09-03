@@ -14,4 +14,4 @@
 .legal-note strong { color: var(--acid); }
 .legal-footer { padding: 25px 0; border-top: 1px solid rgba(255,255,255,.09); color: #716a78; font-size: 11px; }
 .legal-footer .container { display: flex; justify-content: space-between; gap: 15px; }
-@media (max-width: 520px) { .legal-main { padding-top: 70px; }.legal-header .brand { font-size: 18px; }.back-link { font-size: 11px; }.legal-footer .container { flex-direction: column; } }
+@media (max-width: 520px) { .legal-main { padding-top: 70px; }.legal-header .brand-logo--horizontal { height: 29px; }.back-link { font-size: 11px; }.legal-footer .container { flex-direction: column; } }

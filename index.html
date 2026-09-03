@@ -6,7 +6,7 @@
   <title>AuraPvP — Sfida dal vivo. Farma Aura.</title>
   <meta name="description" content="AuraPvP porta le Aura Battle nel mondo reale: sfide dal vivo, pubblico verificato e classifiche basate sui risultati.">
   <meta name="theme-color" content="#08070d">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://aurapvp.app/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
@@ -14,22 +14,52 @@
   <meta property="og:title" content="AuraPvP — Sfida dal vivo. Farma Aura.">
   <meta property="og:description" content="Due persone. Un luogo reale. Il pubblico presente decide chi ha farmato più Aura.">
   <meta property="og:url" content="https://aurapvp.app/">
+  <meta property="og:image" content="https://aurapvp.app/assets/aurapvp-live-community-social-avatar-512.png">
+  <meta property="og:image:secure_url" content="https://aurapvp.app/assets/aurapvp-live-community-social-avatar-512.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Logo AuraPvP per le sfide Aura dal vivo">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="AuraPvP — Sfida dal vivo. Farma Aura.">
   <meta name="twitter:description" content="Le Aura Battle diventano reali.">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="twitter:image" content="https://aurapvp.app/assets/aurapvp-live-community-social-avatar-512.png">
+  <meta name="twitter:image:alt" content="Logo AuraPvP per le sfide Aura dal vivo">
+  <link rel="icon" href="/assets/aurapvp-aura-battle-favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="icon" href="/assets/aurapvp-aura-battle-favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/aurapvp-aura-battle-favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/aurapvp-live-battle-apple-touch-icon-180.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/assets/aurapvp-live-aura-battle-horizontal-logo.png" as="image" type="image/png">
   <link rel="stylesheet" href="/styles.css">
   <script src="/script.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AuraPvP",
+      "url": "https://aurapvp.app/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AuraPvP",
+        "url": "https://aurapvp.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://aurapvp.app/assets/aurapvp-real-world-pvp-app-icon-512.png",
+          "width": 512,
+          "height": 512
+        }
+      }
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Vai al contenuto</a>
 
   <header class="site-header" data-header>
     <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="AuraPvP, torna all'inizio">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>Aura<span>PvP</span></span>
+      <a class="brand brand--horizontal" href="#top" aria-label="AuraPvP, torna all'inizio">
+        <img class="brand-logo brand-logo--horizontal" src="/assets/aurapvp-live-aura-battle-horizontal-logo.png" width="950" height="249" alt="AuraPvP, sfide Aura dal vivo" fetchpriority="high">
       </a>
 
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
@@ -377,7 +407,7 @@
     <section class="final-cta" id="in-arrivo">
       <div class="cta-grid" aria-hidden="true"></div>
       <div class="container cta-content reveal">
-        <div class="aura-emblem" aria-hidden="true"><span></span><span></span><span></span><i>AP</i></div>
+        <img class="cta-brand-icon" src="/assets/aurapvp-real-world-pvp-app-icon-512.png" width="512" height="512" alt="" loading="lazy" decoding="async">
         <span class="section-kicker">In sviluppo</span>
         <h2>La tua prossima sfida<br>non sarà dietro uno schermo.</h2>
         <p>AuraPvP è in sviluppo. Questa è solo l'entrata dell'arena.</p>
@@ -388,7 +418,7 @@
 
   <footer class="site-footer">
     <div class="container footer-top">
-      <a class="brand" href="#top" aria-label="AuraPvP"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Aura<span>PvP</span></span></a>
+      <a class="brand brand--wordmark" href="#top" aria-label="AuraPvP"><img class="brand-logo brand-logo--wordmark" src="/assets/aurapvp-live-pvp-wordmark.png" width="563" height="108" alt="AuraPvP"></a>
       <p>Aura Battle dal vivo. Presenza reale. Voti verificati.</p>
       <nav aria-label="Link legali"><a href="/privacy/">Privacy</a><a href="/cookies/">Cookie</a></nav>
     </div>
