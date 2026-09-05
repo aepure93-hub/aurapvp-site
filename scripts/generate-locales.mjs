@@ -220,8 +220,9 @@ ${locales.map((candidate) => {
 function sharedHead(locale, page, title, description, imageAlt, options = {}) {
   const canonical = absolute(locale, page);
   const socialDescription = options.socialDescription ?? description;
-  const socialImage = `${origin}/assets/aurapvp-live-community-social-avatar-512.png`;
+  const socialImage = `${origin}/assets/aurapvp-live-battle-social-preview-1200x630.png`;
   const robots = options.robots ?? 'index,follow,max-image-preview:large';
+  const alternates = options.alternates === false ? '' : `\n${alternateLinks(page)}`;
   const schema = options.schema ?? {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -238,7 +239,7 @@ function sharedHead(locale, page, title, description, imageAlt, options = {}) {
   <meta name="theme-color" content="#08070d">
   <meta name="robots" content="${robots}">
   <link rel="canonical" href="${canonical}">
-${alternateLinks(page)}
+${alternates}
   <meta property="og:type" content="website">
   <meta property="og:locale" content="${localeMeta[locale].og}">
 ${openGraphAlternates(locale)}
@@ -249,14 +250,16 @@ ${openGraphAlternates(locale)}
   <meta property="og:image" content="${socialImage}">
   <meta property="og:image:secure_url" content="${socialImage}">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="${imageAlt}">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${socialDescription}">
   <meta name="twitter:image" content="${socialImage}">
   <meta name="twitter:image:alt" content="${imageAlt}">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/aurapvp-aura-battle-favicon-96.png" sizes="96x96" type="image/png">
   <link rel="icon" href="/assets/aurapvp-aura-battle-favicon-64.png" sizes="64x64" type="image/png">
   <link rel="icon" href="/assets/aurapvp-aura-battle-favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/assets/aurapvp-aura-battle-favicon-16.png" sizes="16x16" type="image/png">
@@ -416,7 +419,7 @@ function renderLegal(locale, type) {
   return `<!doctype html>
 <html lang="${locale}">
 <head>
-${sharedHead(locale, type, page.title, page.description, c.seo.imageAlt)}
+${sharedHead(locale, type, page.title, page.description, c.seo.imageAlt, { robots: 'noindex,follow', alternates: false })}
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/legal.css">
   <script src="/script.js" defer></script>${autoRedirect}
@@ -443,16 +446,16 @@ function renderManifest(locale) {
 }
 
 function renderSitemap() {
-  const lastmod = '2026-09-03';
-  const pageBlock = (locale, page, priority, images = false) => `  <url>
-    <loc>${absolute(locale, page)}</loc>
+  const lastmod = '2026-09-05';
+  const pageBlock = (locale) => `  <url>
+    <loc>${absolute(locale)}</loc>
     <lastmod>${lastmod}</lastmod>
-    <priority>${priority}</priority>
-${locales.map((candidate) => `    <xhtml:link rel="alternate" hreflang="${candidate}" href="${absolute(candidate, page)}"/>`).join('\n')}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${absolute('en', page)}"/>
-${images ? `    <image:image><image:loc>${origin}/assets/aurapvp-live-aura-battle-horizontal-logo.png</image:loc></image:image>\n    <image:image><image:loc>${origin}/assets/aurapvp-real-world-pvp-app-icon-512.png</image:loc></image:image>\n    <image:image><image:loc>${origin}/assets/aurapvp-live-community-social-avatar-512.png</image:loc></image:image>` : ''}
+${locales.map((candidate) => `    <xhtml:link rel="alternate" hreflang="${candidate}" href="${absolute(candidate)}"/>`).join('\n')}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${absolute('en')}"/>
+    <image:image><image:loc>${origin}/assets/aurapvp-live-battle-social-preview-1200x630.png</image:loc></image:image>
+    <image:image><image:loc>${origin}/assets/aurapvp-live-aura-battle-horizontal-logo.png</image:loc></image:image>
   </url>`;
-  const urls = locales.flatMap((locale) => [pageBlock(locale, 'home', '1.0', true), pageBlock(locale, 'privacy', '0.3'), pageBlock(locale, 'cookies', '0.3')]);
+  const urls = locales.map(pageBlock);
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls.join('\n')}
@@ -468,7 +471,7 @@ function render404() {
     button: copy[locale].legal.back,
   }]));
   return `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found — AuraPvP</title><meta name="robots" content="noindex,follow"><link rel="icon" href="/assets/aurapvp-aura-battle-favicon-64.png" sizes="64x64" type="image/png"><link rel="stylesheet" href="/styles.css"><style>body{min-height:100vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,rgba(155,92,255,.18),transparent 35%),#08070d}.error{padding:30px}.error .brand{margin:0 auto 35px}.error strong{display:block;color:var(--acid);font-family:var(--display);font-size:clamp(90px,22vw,190px);line-height:.8;letter-spacing:-10px}.error h1{margin:25px 0 10px;font-family:var(--display);font-size:32px;text-transform:uppercase}.error p{margin:0 0 28px;color:var(--muted)}</style></head><body><main class="error"><a class="brand brand--horizontal" data-home href="/en/" aria-label="AuraPvP"><img class="brand-logo brand-logo--horizontal" src="/assets/aurapvp-live-aura-battle-horizontal-logo.png" width="950" height="249" alt="AuraPvP"></a><strong>404</strong><h1 data-heading>Outside the arena</h1><p data-body>This page does not exist or has moved.</p><a class="button button-primary" data-button data-home href="/en/">Back to home</a></main><script>const messages=${JSON.stringify(messages)};const supported=${JSON.stringify(locales)};let locale=location.pathname.split('/')[1];if(!supported.includes(locale)){try{locale=localStorage.getItem('aurapvp-language')}catch{}}if(!supported.includes(locale)){locale=(navigator.languages||[navigator.language]).map(value=>value?.toLowerCase().split('-')[0]).find(value=>supported.includes(value))||'en'}const message=messages[locale];document.documentElement.lang=locale;document.title=message.title+' — AuraPvP';document.querySelector('[data-heading]').textContent=message.heading;document.querySelector('[data-body]').textContent=message.body;document.querySelector('[data-button]').textContent=message.button;document.querySelectorAll('[data-home]').forEach(link=>link.href=${JSON.stringify(Object.fromEntries(locales.map((item) => [item, pagePath(item)])))}[locale]);</script></body></html>\n`;
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found — AuraPvP</title><meta name="robots" content="noindex,follow"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/assets/aurapvp-aura-battle-favicon-96.png" sizes="96x96" type="image/png"><link rel="stylesheet" href="/styles.css"><style>body{min-height:100vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,rgba(155,92,255,.18),transparent 35%),#08070d}.error{padding:30px}.error .brand{margin:0 auto 35px}.error strong{display:block;color:var(--acid);font-family:var(--display);font-size:clamp(90px,22vw,190px);line-height:.8;letter-spacing:-10px}.error h1{margin:25px 0 10px;font-family:var(--display);font-size:32px;text-transform:uppercase}.error p{margin:0 0 28px;color:var(--muted)}</style></head><body><main class="error"><a class="brand brand--horizontal" data-home href="/en/" aria-label="AuraPvP"><img class="brand-logo brand-logo--horizontal" src="/assets/aurapvp-live-aura-battle-horizontal-logo.png" width="950" height="249" alt="AuraPvP"></a><strong>404</strong><h1 data-heading>Outside the arena</h1><p data-body>This page does not exist or has moved.</p><a class="button button-primary" data-button data-home href="/en/">Back to home</a></main><script>const messages=${JSON.stringify(messages)};const supported=${JSON.stringify(locales)};let locale=location.pathname.split('/')[1];if(!supported.includes(locale)){try{locale=localStorage.getItem('aurapvp-language')}catch{}}if(!supported.includes(locale)){locale=(navigator.languages||[navigator.language]).map(value=>value?.toLowerCase().split('-')[0]).find(value=>supported.includes(value))||'en'}const message=messages[locale];document.documentElement.lang=locale;document.title=message.title+' — AuraPvP';document.querySelector('[data-heading]').textContent=message.heading;document.querySelector('[data-body]').textContent=message.body;document.querySelector('[data-button]').textContent=message.button;document.querySelectorAll('[data-home]').forEach(link=>link.href=${JSON.stringify(Object.fromEntries(locales.map((item) => [item, pagePath(item)])))}[locale]);</script></body></html>\n`;
 }
 
 async function writeRoute(route, contents) {

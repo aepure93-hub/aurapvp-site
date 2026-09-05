@@ -2,8 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://aurapvp.app/en/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-09-05</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/"/>
@@ -11,40 +10,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/"/>
+    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-battle-social-preview-1200x630.png</image:loc></image:image>
     <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-aura-battle-horizontal-logo.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-real-world-pvp-app-icon-512.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-community-social-avatar-512.png</image:loc></image:image>
-  </url>
-  <url>
-    <loc>https://aurapvp.app/en/privacy/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/privacy/"/>
-
-  </url>
-  <url>
-    <loc>https://aurapvp.app/en/cookies/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/cookies/"/>
-
   </url>
   <url>
     <loc>https://aurapvp.app/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-09-05</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/"/>
@@ -52,40 +23,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/"/>
+    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-battle-social-preview-1200x630.png</image:loc></image:image>
     <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-aura-battle-horizontal-logo.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-real-world-pvp-app-icon-512.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-community-social-avatar-512.png</image:loc></image:image>
-  </url>
-  <url>
-    <loc>https://aurapvp.app/privacy/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/privacy/"/>
-
-  </url>
-  <url>
-    <loc>https://aurapvp.app/cookies/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/cookies/"/>
-
   </url>
   <url>
     <loc>https://aurapvp.app/es/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-09-05</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/"/>
@@ -93,40 +36,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/"/>
+    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-battle-social-preview-1200x630.png</image:loc></image:image>
     <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-aura-battle-horizontal-logo.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-real-world-pvp-app-icon-512.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-community-social-avatar-512.png</image:loc></image:image>
-  </url>
-  <url>
-    <loc>https://aurapvp.app/es/privacy/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/privacy/"/>
-
-  </url>
-  <url>
-    <loc>https://aurapvp.app/es/cookies/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/cookies/"/>
-
   </url>
   <url>
     <loc>https://aurapvp.app/pt/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-09-05</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/"/>
@@ -134,40 +49,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/"/>
+    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-battle-social-preview-1200x630.png</image:loc></image:image>
     <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-aura-battle-horizontal-logo.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-real-world-pvp-app-icon-512.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-community-social-avatar-512.png</image:loc></image:image>
-  </url>
-  <url>
-    <loc>https://aurapvp.app/pt/privacy/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/privacy/"/>
-
-  </url>
-  <url>
-    <loc>https://aurapvp.app/pt/cookies/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/cookies/"/>
-
   </url>
   <url>
     <loc>https://aurapvp.app/de/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-09-05</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/"/>
@@ -175,40 +62,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/"/>
+    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-battle-social-preview-1200x630.png</image:loc></image:image>
     <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-aura-battle-horizontal-logo.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-real-world-pvp-app-icon-512.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-community-social-avatar-512.png</image:loc></image:image>
-  </url>
-  <url>
-    <loc>https://aurapvp.app/de/privacy/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/privacy/"/>
-
-  </url>
-  <url>
-    <loc>https://aurapvp.app/de/cookies/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/cookies/"/>
-
   </url>
   <url>
     <loc>https://aurapvp.app/fr/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-09-05</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/"/>
@@ -216,34 +75,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/"/>
+    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-battle-social-preview-1200x630.png</image:loc></image:image>
     <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-aura-battle-horizontal-logo.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-real-world-pvp-app-icon-512.png</image:loc></image:image>
-    <image:image><image:loc>https://aurapvp.app/assets/aurapvp-live-community-social-avatar-512.png</image:loc></image:image>
-  </url>
-  <url>
-    <loc>https://aurapvp.app/fr/privacy/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/privacy/"/>
-
-  </url>
-  <url>
-    <loc>https://aurapvp.app/fr/cookies/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurapvp.app/en/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://aurapvp.app/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurapvp.app/es/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aurapvp.app/pt/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aurapvp.app/de/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aurapvp.app/fr/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurapvp.app/en/cookies/"/>
-
   </url>
 </urlset>

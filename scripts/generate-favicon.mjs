@@ -1,0 +1,20 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const png = await readFile(path.join(root, 'assets', 'aurapvp-aura-battle-favicon-64.png'));
+const header = Buffer.alloc(22);
+header.writeUInt16LE(0, 0);
+header.writeUInt16LE(1, 2);
+header.writeUInt16LE(1, 4);
+header.writeUInt8(64, 6);
+header.writeUInt8(64, 7);
+header.writeUInt8(0, 8);
+header.writeUInt8(0, 9);
+header.writeUInt16LE(1, 10);
+header.writeUInt16LE(32, 12);
+header.writeUInt32LE(png.length, 14);
+header.writeUInt32LE(22, 18);
+await writeFile(path.join(root, 'favicon.ico'), Buffer.concat([header, png]));
+console.log('Generated favicon.ico from the 64×64 AuraPvP PNG favicon.');

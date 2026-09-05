@@ -24,9 +24,16 @@ for (const locale of locales) {
     const html = await readFile(file, 'utf8');
     if (!html.includes(`<html lang="${locale}">`)) failures.push(`${route}: wrong html lang`);
     if (!html.includes(`<link rel="canonical" href="https://aurapvp.app${route}">`)) failures.push(`${route}: wrong canonical`);
-    if ((html.match(/rel="alternate" hreflang=/g) ?? []).length !== 7) failures.push(`${route}: incomplete hreflang set`);
+    const isHome = route === routes[locale][0];
+    const hreflangCount = (html.match(/rel="alternate" hreflang=/g) ?? []).length;
+    if (isHome && hreflangCount !== 7) failures.push(`${route}: incomplete hreflang set`);
+    if (!isHome && hreflangCount !== 0) failures.push(`${route}: noindex page should not declare hreflang`);
     if ((html.match(/data-language="/g) ?? []).length !== 6) failures.push(`${route}: incomplete language picker`);
     if (!/<title>[^<]+<\/title>/.test(html) || !/<meta name="description" content="[^"]+">/.test(html)) failures.push(`${route}: missing search metadata`);
+    if (isHome && !html.includes('name="robots" content="index,follow,max-image-preview:large"')) failures.push(`${route}: home must be indexable`);
+    if (!isHome && !html.includes('name="robots" content="noindex,follow"')) failures.push(`${route}: legal page must be noindex`);
+    if (isHome && !html.includes('twitter:card" content="summary_large_image"')) failures.push(`${route}: missing large social card`);
+    if (isHome && !html.includes('og:image:width" content="1200"')) failures.push(`${route}: wrong social image dimensions`);
     const jsonLd = html.match(/<script type="application\/ld\+json">(.+)<\/script>/)?.[1];
     try { JSON.parse(jsonLd); } catch { failures.push(`${route}: invalid JSON-LD`); }
     if (/[ÃÂ]|â(?:€|™|œ|ž)/.test(html)) failures.push(`${route}: possible encoding corruption`);
@@ -36,10 +43,12 @@ for (const locale of locales) {
 }
 
 const sitemap = await readFile(path.join(root, 'sitemap.xml'), 'utf8');
-if ((sitemap.match(/<url>/g) ?? []).length !== 18) failures.push('sitemap: expected 18 URLs');
+if ((sitemap.match(/<url>/g) ?? []).length !== 6) failures.push('sitemap: expected 6 indexable URLs');
 for (const locale of locales) {
-  for (const route of routes[locale]) {
-    if (!sitemap.includes(`<loc>https://aurapvp.app${route}</loc>`)) failures.push(`sitemap: missing ${route}`);
+  const route = routes[locale][0];
+  if (!sitemap.includes(`<loc>https://aurapvp.app${route}</loc>`)) failures.push(`sitemap: missing ${route}`);
+  for (const legalRoute of routes[locale].slice(1)) {
+    if (sitemap.includes(`<loc>https://aurapvp.app${legalRoute}</loc>`)) failures.push(`sitemap: noindex URL included ${legalRoute}`);
   }
 }
 
