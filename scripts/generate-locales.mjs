@@ -269,17 +269,169 @@ const releaseLegal = {
   },
 };
 
-for (const locale of ['es', 'pt', 'de', 'fr']) {
-  releaseLegal[locale] = {
-    ...releaseLegal.en,
-    labels: {
-      es: { privacy: 'Política de privacidad', terms: 'Términos del servicio', accountDeletion: 'Eliminar cuenta', cookies: 'Cookies' },
-      pt: { privacy: 'Política de Privacidade', terms: 'Termos de Serviço', accountDeletion: 'Eliminar conta', cookies: 'Cookies' },
-      de: { privacy: 'Datenschutzerklärung', terms: 'Nutzungsbedingungen', accountDeletion: 'Konto löschen', cookies: 'Cookies' },
-      fr: { privacy: 'Politique de confidentialité', terms: 'Conditions d’utilisation', accountDeletion: 'Supprimer le compte', cookies: 'Cookies' },
-    }[locale],
-  };
-}
+releaseLegal.es = {
+  labels: { privacy: 'Política de privacidad', terms: 'Términos del servicio', accountDeletion: 'Eliminar cuenta', cookies: 'Cookies' },
+  privacy: {
+    title: 'Política de privacidad — AuraPvP', heading: 'Política de privacidad', description: 'Política de privacidad de la aplicación y el sitio web AuraPvP.',
+    intro: 'Esta política explica cómo AuraPvP trata los datos personales en la aplicación móvil y en <strong>aurapvp.app</strong>.',
+    note: `<strong>Responsable:</strong> Alin Daniel Epure, Italia. Contacto: ${legalContact}. Última actualización: 11 de septiembre de 2026.`,
+    sections: [
+      ['Datos que tratamos', 'Identificadores de cuenta proporcionados por Google o Apple, nombre y foto del perfil público, actividad de desafíos y batallas, seguimientos, token push del dispositivo, votos y muestras de ubicación usadas para verificar la asistencia. Los datos de pago son tratados por las tiendas y RevenueCat solo cuando las suscripciones están activas; AuraPvP no recibe los datos completos de la tarjeta.'],
+      ['Ubicación y votos', 'La ubicación precisa se solicita únicamente para el check-in y la verificación de presencia durante una batalla activa, también en segundo plano después de que el usuario inicie el check-in. Nunca se muestra a otros usuarios. Los votos individuales no son públicos; solo se publican los totales y los resultados.'],
+      ['Finalidades y bases jurídicas', 'Tratamos los datos para prestar el servicio y aplicar sus reglas, proteger la plataforma y prevenir el fraude, enviar los recordatorios elegidos por el usuario y cumplir obligaciones legales. Las bases jurídicas son la ejecución del servicio, el interés legítimo en la seguridad y el juego limpio, las obligaciones legales y el consentimiento cuando sea necesario.'],
+      ['Conservación', 'La cuenta y el perfil se conservan hasta su eliminación. Las muestras de presencia sin procesar se guardan hasta 30 días; los datos de batalla, integridad del voto y asistencia agregada, hasta 24 meses para resolver disputas y proteger las clasificaciones. Los tokens push se eliminan al desactivar las notificaciones, borrar la cuenta o dejar de ser válidos. Los registros exigidos por ley o necesarios contra abusos pueden conservarse durante más tiempo de forma restringida.'],
+      ['Proveedores y transferencias', 'AuraPvP utiliza Google Firebase y autenticación, Vercel, los servicios push de Expo, autenticación de Apple cuando está disponible, RevenueCat cuando se activan las suscripciones y GitHub Pages para el sitio. Estos proveedores pueden tratar datos fuera del EEE con sus garantías contractuales. Los datos no se venden ni se usan para publicidad comportamental.'],
+      ['Opciones y derechos', `Puedes desactivar las notificaciones y la ubicación en los ajustes del dispositivo y eliminar la cuenta desde la aplicación. También puedes usar el <a href="${localeMeta.es.accountDeletion}">procedimiento web de eliminación</a>. Para ejercer derechos de acceso, rectificación, supresión, limitación, portabilidad u oposición, escribe a ${legalContact}. Puedes reclamar ante tu autoridad de protección de datos.`],
+      ['Menores y seguridad', 'AuraPvP no está dirigida a menores de 16 años. Debes cumplir la edad mínima exigida en tu país y las normas locales aplicables a eventos en lugares públicos.'],
+    ],
+  },
+  terms: {
+    title: 'Términos del servicio — AuraPvP', heading: 'Términos del servicio', description: 'Condiciones de uso de AuraPvP.',
+    intro: 'Estos términos regulan el uso de la aplicación y los servicios AuraPvP. Al crear una cuenta, los aceptas.',
+    note: `<strong>Proveedor:</strong> Alin Daniel Epure, Italia. Contacto: ${legalContact}. Vigentes desde el 11 de septiembre de 2026.`,
+    sections: [
+      ['Requisitos', 'Debes tener al menos 16 años y capacidad legal para aceptar estos términos. Si la legislación local exige permiso parental, debes obtenerlo antes de usar AuraPvP.'],
+      ['Uso seguro y legal', 'Las batallas deben celebrarse legalmente en lugares públicos reconocidos y seguros. Se prohíben la violencia, el acoso, las amenazas, los actos peligrosos, el acceso no autorizado, los eventos en viviendas privadas, la suplantación, las trampas, la falsificación de ubicación y la manipulación de votos. AuraPvP no es organizador, árbitro ni servicio de emergencias.'],
+      ['Cuentas y contenido', 'Protege tu cuenta y proporciona información correcta. Eres responsable del contenido y los desafíos que creas y concedes a AuraPvP únicamente los derechos necesarios para alojarlos y mostrarlos. Denuncia actividades ilegales o peligrosas y abandona cualquier situación insegura.'],
+      ['Batallas y clasificaciones', 'El check-in, la presencia, el público y los umbrales de voto determinan si una batalla afecta a las clasificaciones. El voto es definitivo y públicamente anónimo. AuraPvP puede invalidar resultados, limitar funciones o suspender cuentas por infracciones o anomalías.'],
+      ['Disponibilidad y cambios', 'El servicio puede cambiar, interrumpirse o contener errores. Las funciones pueden añadirse o retirarse con un aviso razonable cuando el cambio sea importante. El MVP gratuito no garantiza disponibilidad continua ni valor económico de puntuaciones o resultados.'],
+      ['Responsabilidad y terminación', 'Nada excluye responsabilidades que la ley no permita excluir. En la medida permitida, AuraPvP no responde de reuniones organizadas por usuarios, conductas de terceros ni daños indirectos. Puedes dejar de usar el servicio y eliminar tu cuenta en cualquier momento; AuraPvP puede suspender infracciones graves o reiteradas. Se aplica la ley italiana sin limitar la protección obligatoria del consumidor de tu país.'],
+    ],
+  },
+  accountDeletion: {
+    title: 'Eliminar una cuenta AuraPvP', heading: 'Elimina tu cuenta', description: 'Cómo eliminar una cuenta AuraPvP y sus datos asociados.',
+    intro: 'Puedes eliminar definitivamente tu cuenta AuraPvP y los datos personales asociados.',
+    note: '<strong>Método más rápido:</strong> en la aplicación abre Perfil → Ajustes → Eliminar cuenta y confirma.',
+    sections: [
+      ['Sin acceso a la aplicación', `Escribe a ${legalContact} desde la dirección usada en AuraPvP con el asunto “Eliminación de cuenta AuraPvP”. Indica únicamente tu nombre visible y correo de acceso. Podemos pedirte que verifiques el control de la cuenta; no envíes contraseñas ni documentos de identidad salvo que se explique una necesidad legal mediante un canal seguro.`],
+      ['Qué se elimina', 'Se eliminan o anonimizan la cuenta de autenticación, los datos privados, el perfil, los seguimientos, tokens push, desafíos pendientes, registros de presencia y votos vinculados a la cuenta.'],
+      ['Plazos y excepciones', 'La eliminación desde la aplicación comienza de inmediato. Las solicitudes por correo suelen completarse en un plazo de 30 días. Puede conservarse información limitada cuando la ley lo exija o sea necesaria para prevenir abusos, resolver disputas o proteger la integridad de la plataforma; después se elimina o anonimiza.'],
+    ],
+  },
+};
+
+releaseLegal.pt = {
+  labels: { privacy: 'Política de Privacidade', terms: 'Termos de Serviço', accountDeletion: 'Eliminar conta', cookies: 'Cookies' },
+  privacy: {
+    title: 'Política de Privacidade — AuraPvP', heading: 'Política de Privacidade', description: 'Política de privacidade da aplicação e do site AuraPvP.',
+    intro: 'Esta política explica como a AuraPvP trata dados pessoais na aplicação móvel e em <strong>aurapvp.app</strong>.',
+    note: `<strong>Responsável:</strong> Alin Daniel Epure, Itália. Contacto: ${legalContact}. Última atualização: 11 de setembro de 2026.`,
+    sections: [
+      ['Dados tratados', 'Identificadores de conta fornecidos pela Google ou Apple, nome e fotografia do perfil público, atividade de desafios e batalhas, seguidores, token push do dispositivo, votos e amostras de localização usadas para verificar a presença. Os dados de pagamento são tratados pelas lojas e pela RevenueCat apenas quando as subscrições estão ativas; a AuraPvP não recebe os dados completos do cartão.'],
+      ['Localização e votos', 'A localização precisa é solicitada apenas para check-in e verificação de presença durante uma batalha ativa, incluindo em segundo plano depois de o utilizador iniciar o check-in. Nunca é mostrada a outros utilizadores. Os votos individuais não são públicos; apenas os totais e resultados são publicados.'],
+      ['Finalidades e fundamentos jurídicos', 'Os dados são tratados para prestar o serviço e aplicar as regras, proteger a plataforma e prevenir fraude, enviar lembretes escolhidos pelo utilizador e cumprir obrigações legais. Os fundamentos são a execução do serviço, os interesses legítimos de segurança e jogo justo, obrigações legais e consentimento quando exigido.'],
+      ['Conservação', 'A conta e o perfil permanecem até à eliminação. As amostras brutas de presença são guardadas até 30 dias; os dados de batalha, integridade do voto e presença agregada, até 24 meses para resolver litígios e proteger as classificações. Os tokens push são removidos ao desativar notificações, eliminar a conta ou deixarem de ser válidos. Registos exigidos por lei ou necessários contra abusos podem ser conservados por mais tempo de forma restrita.'],
+      ['Fornecedores e transferências', 'A AuraPvP utiliza Google Firebase e autenticação, Vercel, serviços push da Expo, autenticação Apple quando disponível, RevenueCat quando as subscrições estão ativas e GitHub Pages para o site. Estes fornecedores podem tratar dados fora do EEE ao abrigo das suas garantias contratuais. Os dados não são vendidos nem usados para publicidade comportamental.'],
+      ['Opções e direitos', `Pode desativar notificações e localização nas definições do dispositivo e eliminar a conta na aplicação. Também pode usar o <a href="${localeMeta.pt.accountDeletion}">procedimento web de eliminação</a>. Para acesso, retificação, apagamento, limitação, portabilidade ou oposição, contacte ${legalContact}. Pode reclamar junto da autoridade de proteção de dados.`],
+      ['Menores e segurança', 'A AuraPvP não se destina a menores de 16 anos. O utilizador deve cumprir a idade mínima exigida no seu país e as regras locais aplicáveis a eventos em locais públicos.'],
+    ],
+  },
+  terms: {
+    title: 'Termos de Serviço — AuraPvP', heading: 'Termos de Serviço', description: 'Condições de utilização da AuraPvP.',
+    intro: 'Estes termos regulam a utilização da aplicação e dos serviços AuraPvP. Ao criar uma conta, aceita-os.',
+    note: `<strong>Prestador:</strong> Alin Daniel Epure, Itália. Contacto: ${legalContact}. Em vigor desde 11 de setembro de 2026.`,
+    sections: [
+      ['Requisitos', 'Tem de ter pelo menos 16 anos e capacidade legal para aceitar estes termos. Se a lei local exigir autorização parental, deve obtê-la antes de usar a AuraPvP.'],
+      ['Utilização segura e legal', 'As batalhas devem ocorrer legalmente em locais públicos reconhecidos e seguros. São proibidos violência, assédio, ameaças, atos perigosos, invasão, eventos em residências privadas, usurpação de identidade, fraude, falsificação de localização e manipulação de votos. A AuraPvP não é organizadora, árbitro nem serviço de emergência.'],
+      ['Contas e conteúdo', 'Proteja a conta e forneça informações corretas. Continua responsável pelos conteúdos e desafios que cria e concede à AuraPvP apenas os direitos necessários para os alojar e apresentar. Denuncie atividades ilegais ou perigosas e abandone qualquer situação insegura.'],
+      ['Batalhas e classificações', 'O check-in, a presença, o público e os limites de voto determinam se uma batalha afeta as classificações. O voto é definitivo e publicamente anónimo. A AuraPvP pode invalidar resultados, limitar funções ou suspender contas em caso de infrações ou anomalias.'],
+      ['Disponibilidade e alterações', 'O serviço pode mudar, ser interrompido ou conter erros. As funções podem ser adicionadas ou removidas com aviso razoável para alterações relevantes. O MVP gratuito não garante disponibilidade contínua nem valor económico de classificações ou resultados.'],
+      ['Responsabilidade e cessação', 'Nada exclui responsabilidades que não possam ser legalmente excluídas. Na medida permitida, a AuraPvP não responde por encontros organizados por utilizadores, conduta de terceiros ou perdas indiretas. Pode deixar de usar o serviço e eliminar a conta a qualquer momento; a AuraPvP pode suspender infrações graves ou repetidas. Aplica-se a lei italiana sem retirar as proteções obrigatórias do consumidor no seu país.'],
+    ],
+  },
+  accountDeletion: {
+    title: 'Eliminar conta AuraPvP', heading: 'Elimine a sua conta', description: 'Como eliminar uma conta AuraPvP e os dados associados.',
+    intro: 'Pode eliminar definitivamente a sua conta AuraPvP e os dados pessoais associados.',
+    note: '<strong>Método mais rápido:</strong> na aplicação abra Perfil → Definições → Eliminar conta e confirme.',
+    sections: [
+      ['Sem acesso à aplicação', `Envie uma mensagem para ${legalContact} a partir do endereço usado na AuraPvP com o assunto “Eliminação de conta AuraPvP”. Indique apenas o nome apresentado e o email de acesso. Poderemos pedir que confirme o controlo da conta; não envie palavras-passe nem documentos de identidade salvo necessidade legal explicada através de um canal seguro.`],
+      ['O que é eliminado', 'A conta de autenticação, dados privados, perfil, seguidores, tokens push, desafios pendentes, registos de presença e votos associados são eliminados ou anonimizados.'],
+      ['Prazos e exceções', 'A eliminação na aplicação começa de imediato. Os pedidos por email são normalmente concluídos em 30 dias. Dados limitados podem ser conservados quando exigido por lei ou necessário para prevenir abusos, resolver litígios ou proteger a integridade da plataforma, sendo depois eliminados ou anonimizados.'],
+    ],
+  },
+};
+
+releaseLegal.de = {
+  labels: { privacy: 'Datenschutzerklärung', terms: 'Nutzungsbedingungen', accountDeletion: 'Konto löschen', cookies: 'Cookies' },
+  privacy: {
+    title: 'Datenschutzerklärung — AuraPvP', heading: 'Datenschutzerklärung', description: 'Datenschutzerklärung für die AuraPvP-App und -Website.',
+    intro: 'Diese Erklärung erläutert, wie AuraPvP personenbezogene Daten in der mobilen App und auf <strong>aurapvp.app</strong> verarbeitet.',
+    note: `<strong>Verantwortlicher:</strong> Alin Daniel Epure, Italien. Kontakt: ${legalContact}. Stand: 11. September 2026.`,
+    sections: [
+      ['Verarbeitete Daten', 'Von Google oder Apple bereitgestellte Kontokennungen, öffentlicher Profilname und Profilbild, Challenge- und Battle-Aktivitäten, Follows, Push-Token des Geräts, Stimmen sowie Standortproben zur Anwesenheitsprüfung. Zahlungsdaten werden nur bei aktivierten Abonnements von den App-Stores und RevenueCat verarbeitet; AuraPvP erhält keine vollständigen Kartendaten.'],
+      ['Standort und Stimmen', 'Der genaue Standort wird ausschließlich für Check-in und Anwesenheitsprüfung während eines aktiven Battles angefordert, auch im Hintergrund, nachdem der Nutzer den Check-in gestartet hat. Er wird anderen Nutzern niemals angezeigt. Einzelne Stimmen werden nicht veröffentlicht; sichtbar sind nur Summen und Ergebnisse.'],
+      ['Zwecke und Rechtsgrundlagen', 'Die Daten werden zur Bereitstellung des Dienstes und Durchsetzung seiner Regeln, zum Schutz der Plattform und zur Betrugsprävention, für vom Nutzer gewählte Erinnerungen sowie zur Erfüllung gesetzlicher Pflichten verarbeitet. Rechtsgrundlagen sind die Vertragserfüllung, berechtigte Interessen an Sicherheit und fairem Wettbewerb, gesetzliche Pflichten und – soweit erforderlich – die Einwilligung.'],
+      ['Speicherdauer', 'Konto- und Profildaten bleiben bis zur Löschung gespeichert. Rohe Anwesenheitsproben werden bis zu 30 Tage aufbewahrt; Battle-, Stimmintegritäts- und aggregierte Anwesenheitsdaten bis zu 24 Monate zur Klärung von Streitfällen und zum Schutz der Ranglisten. Push-Token werden bei Deaktivierung der Benachrichtigungen, Kontolöschung oder Ungültigkeit entfernt. Gesetzlich oder zur Missbrauchsprävention erforderliche Daten können eingeschränkt länger gespeichert werden.'],
+      ['Dienstleister und Übermittlungen', 'AuraPvP nutzt Google Firebase und Authentifizierung, Vercel, Expo-Pushdienste, Apple-Anmeldung soweit verfügbar, RevenueCat bei aktivierten Abonnements und GitHub Pages für die Website. Diese Anbieter können Daten auf Grundlage ihrer vertraglichen Garantien außerhalb des EWR verarbeiten. Daten werden weder verkauft noch für verhaltensbasierte Werbung verwendet.'],
+      ['Wahlmöglichkeiten und Rechte', `Benachrichtigungen und Standortzugriff können in den Geräteeinstellungen deaktiviert und das Konto in der App gelöscht werden. Außerdem steht das <a href="${localeMeta.de.accountDeletion}">Webverfahren zur Kontolöschung</a> zur Verfügung. Für Auskunft, Berichtigung, Löschung, Einschränkung, Übertragbarkeit oder Widerspruch kontaktieren Sie ${legalContact}. Sie können sich bei Ihrer Datenschutzaufsichtsbehörde beschweren.`],
+      ['Minderjährige und Sicherheit', 'AuraPvP richtet sich nicht an Personen unter 16 Jahren. Nutzer müssen das in ihrem Land geltende Mindestalter und örtliche Regeln für Veranstaltungen an öffentlichen Orten einhalten.'],
+    ],
+  },
+  terms: {
+    title: 'Nutzungsbedingungen — AuraPvP', heading: 'Nutzungsbedingungen', description: 'Bedingungen für die Nutzung von AuraPvP.',
+    intro: 'Diese Bedingungen regeln die Nutzung der AuraPvP-App und -Dienste. Mit der Kontoerstellung stimmen Sie ihnen zu.',
+    note: `<strong>Anbieter:</strong> Alin Daniel Epure, Italien. Kontakt: ${legalContact}. Gültig ab 11. September 2026.`,
+    sections: [
+      ['Voraussetzungen', 'Sie müssen mindestens 16 Jahre alt und rechtlich befugt sein, diese Bedingungen anzunehmen. Verlangt das örtliche Recht eine elterliche Zustimmung, muss diese vor der Nutzung eingeholt werden.'],
+      ['Sichere und rechtmäßige Nutzung', 'Battles müssen rechtmäßig an anerkannten, sicheren öffentlichen Orten stattfinden. Untersagt sind Gewalt, Belästigung, Drohungen, gefährliche Handlungen, Hausfriedensbruch, Veranstaltungen in Privatwohnungen, Identitätstäuschung, Betrug, Standortmanipulation und Stimmenmanipulation. AuraPvP ist weder Veranstalter noch Schiedsrichter oder Notfalldienst.'],
+      ['Konten und Inhalte', 'Schützen Sie Ihr Konto und machen Sie korrekte Angaben. Für erstellte Inhalte und Challenges bleiben Sie verantwortlich und räumen AuraPvP nur die zum Hosten und Anzeigen erforderlichen Rechte ein. Melden Sie rechtswidrige oder gefährliche Aktivitäten und verlassen Sie unsichere Situationen.'],
+      ['Battles und Ranglisten', 'Check-in, Anwesenheit, Zuschauerzahl und Abstimmungsschwellen bestimmen, ob ein Battle die Ranglisten beeinflusst. Eine Stimme ist endgültig und öffentlich anonym. AuraPvP kann bei Verstößen oder Auffälligkeiten Ergebnisse für ungültig erklären, Funktionen beschränken oder Konten sperren.'],
+      ['Verfügbarkeit und Änderungen', 'Der Dienst kann geändert oder unterbrochen werden und Fehler enthalten. Funktionen können mit angemessener Vorankündigung wesentlicher Änderungen hinzugefügt oder entfernt werden. Das kostenlose MVP garantiert weder ständige Verfügbarkeit noch einen wirtschaftlichen Wert von Wertungen oder Ergebnissen.'],
+      ['Haftung und Beendigung', 'Zwingende gesetzliche Haftung bleibt unberührt. Soweit zulässig, haftet AuraPvP nicht für von Nutzern organisierte Treffen, das Verhalten anderer oder indirekte Schäden. Sie können die Nutzung jederzeit beenden und Ihr Konto löschen; AuraPvP kann schwere oder wiederholte Verstöße sperren. Es gilt italienisches Recht, ohne zwingende Verbraucherschutzrechte Ihres Landes einzuschränken.'],
+    ],
+  },
+  accountDeletion: {
+    title: 'AuraPvP-Konto löschen', heading: 'Konto löschen', description: 'So löschen Sie ein AuraPvP-Konto und die zugehörigen Daten.',
+    intro: 'Sie können Ihr AuraPvP-Konto und die zugehörigen personenbezogenen Daten dauerhaft löschen.',
+    note: '<strong>Schnellster Weg:</strong> Öffnen Sie in der App Profil → Einstellungen → Konto löschen und bestätigen Sie.',
+    sections: [
+      ['Ohne Zugriff auf die App', `Schreiben Sie von der für AuraPvP verwendeten Adresse an ${legalContact} mit dem Betreff „AuraPvP-Kontolöschung“. Nennen Sie nur Anzeigenamen und Anmelde-E-Mail. Wir können einen Nachweis der Kontoverfügungsgewalt verlangen; senden Sie keine Passwörter oder Ausweisdokumente, sofern eine rechtliche Notwendigkeit nicht über einen sicheren Kanal erläutert wurde.`],
+      ['Gelöschte Daten', 'Authentifizierungskonto, private Kontodaten, Profil, Follows, Push-Token, offene Challenges, Anwesenheitsdaten und zugeordnete Stimmen werden gelöscht oder anonymisiert.'],
+      ['Fristen und Ausnahmen', 'Die Löschung in der App beginnt sofort. E-Mail-Anfragen werden üblicherweise innerhalb von 30 Tagen abgeschlossen. Begrenzte Daten können bei gesetzlicher Pflicht oder zur Missbrauchsprävention, Streitbeilegung oder Sicherung der Plattformintegrität aufbewahrt und danach gelöscht oder anonymisiert werden.'],
+    ],
+  },
+};
+
+releaseLegal.fr = {
+  labels: { privacy: 'Politique de confidentialité', terms: 'Conditions d’utilisation', accountDeletion: 'Supprimer le compte', cookies: 'Cookies' },
+  privacy: {
+    title: 'Politique de confidentialité — AuraPvP', heading: 'Politique de confidentialité', description: 'Politique de confidentialité de l’application et du site AuraPvP.',
+    intro: 'Cette politique explique comment AuraPvP traite les données personnelles dans l’application mobile et sur <strong>aurapvp.app</strong>.',
+    note: `<strong>Responsable du traitement :</strong> Alin Daniel Epure, Italie. Contact : ${legalContact}. Dernière mise à jour : 11 septembre 2026.`,
+    sections: [
+      ['Données traitées', 'Identifiants de compte fournis par Google ou Apple, nom et photo du profil public, activité liée aux défis et battles, abonnements à des profils, jeton push de l’appareil, votes et échantillons de position utilisés pour vérifier la présence. Les données de paiement sont traitées par les boutiques et RevenueCat uniquement lorsque les abonnements sont activés ; AuraPvP ne reçoit pas les données complètes de carte bancaire.'],
+      ['Position et votes', 'La position précise est demandée uniquement pour le check-in et la vérification de présence pendant un battle actif, y compris en arrière-plan après le lancement du check-in. Elle n’est jamais affichée aux autres utilisateurs. Les votes individuels ne sont pas publics ; seuls les totaux et résultats sont publiés.'],
+      ['Finalités et bases juridiques', 'Les données servent à fournir le service et appliquer ses règles, sécuriser la plateforme et prévenir la fraude, envoyer les rappels choisis par l’utilisateur et respecter les obligations légales. Les bases juridiques sont l’exécution du service, les intérêts légitimes de sécurité et d’équité, les obligations légales et le consentement lorsqu’il est requis.'],
+      ['Conservation', 'Le compte et le profil sont conservés jusqu’à leur suppression. Les échantillons bruts de présence sont conservés jusqu’à 30 jours ; les données de battle, d’intégrité des votes et de présence agrégée jusqu’à 24 mois pour résoudre les litiges et protéger les classements. Les jetons push sont supprimés lorsque les notifications sont désactivées, le compte supprimé ou le jeton invalide. Les données exigées par la loi ou nécessaires contre les abus peuvent être conservées plus longtemps de façon restreinte.'],
+      ['Prestataires et transferts', 'AuraPvP utilise Google Firebase et l’authentification, Vercel, les services push Expo, l’authentification Apple lorsqu’elle est disponible, RevenueCat lorsque les abonnements sont activés et GitHub Pages pour le site. Ces prestataires peuvent traiter des données hors de l’EEE selon leurs garanties contractuelles. Les données ne sont ni vendues ni utilisées pour la publicité comportementale.'],
+      ['Choix et droits', `Vous pouvez désactiver les notifications et la position dans les réglages de l’appareil et supprimer le compte dans l’application. Vous pouvez aussi utiliser la <a href="${localeMeta.fr.accountDeletion}">procédure web de suppression</a>. Pour l’accès, la rectification, l’effacement, la limitation, la portabilité ou l’opposition, contactez ${legalContact}. Vous pouvez saisir votre autorité de protection des données.`],
+      ['Mineurs et sécurité', 'AuraPvP ne s’adresse pas aux moins de 16 ans. L’utilisateur doit respecter l’âge minimum applicable dans son pays et les règles locales relatives aux événements dans les lieux publics.'],
+    ],
+  },
+  terms: {
+    title: 'Conditions d’utilisation — AuraPvP', heading: 'Conditions d’utilisation', description: 'Conditions régissant l’utilisation d’AuraPvP.',
+    intro: 'Ces conditions régissent l’utilisation de l’application et des services AuraPvP. En créant un compte, vous les acceptez.',
+    note: `<strong>Fournisseur :</strong> Alin Daniel Epure, Italie. Contact : ${legalContact}. En vigueur depuis le 11 septembre 2026.`,
+    sections: [
+      ['Conditions d’accès', 'Vous devez avoir au moins 16 ans et la capacité juridique d’accepter ces conditions. Si la loi locale exige une autorisation parentale, vous devez l’obtenir avant d’utiliser AuraPvP.'],
+      ['Utilisation sûre et légale', 'Les battles doivent avoir lieu légalement dans des lieux publics reconnus et sûrs. Sont interdits la violence, le harcèlement, les menaces, les actes dangereux, l’intrusion, les événements dans des domiciles privés, l’usurpation d’identité, la triche, la falsification de position et la manipulation des votes. AuraPvP n’est ni organisateur, ni arbitre, ni service d’urgence.'],
+      ['Comptes et contenus', 'Protégez votre compte et fournissez des informations exactes. Vous restez responsable des contenus et défis créés et accordez à AuraPvP uniquement les droits nécessaires pour les héberger et les afficher. Signalez les activités illégales ou dangereuses et quittez toute situation peu sûre.'],
+      ['Battles et classements', 'Le check-in, la présence, le public et les seuils de vote déterminent si un battle affecte les classements. Le vote est définitif et publiquement anonyme. AuraPvP peut invalider des résultats, limiter des fonctions ou suspendre des comptes en cas d’infraction ou d’anomalie.'],
+      ['Disponibilité et modifications', 'Le service peut évoluer, être interrompu ou contenir des erreurs. Des fonctions peuvent être ajoutées ou retirées avec un préavis raisonnable pour les changements importants. Le MVP gratuit ne garantit ni disponibilité continue ni valeur économique des notes ou résultats.'],
+      ['Responsabilité et résiliation', 'Aucune responsabilité légalement impérative n’est exclue. Dans les limites autorisées, AuraPvP n’est pas responsable des rencontres organisées par les utilisateurs, du comportement d’autrui ni des pertes indirectes. Vous pouvez cesser d’utiliser le service et supprimer votre compte à tout moment ; AuraPvP peut suspendre les infractions graves ou répétées. Le droit italien s’applique sans retirer les protections impératives du consommateur dans votre pays.'],
+    ],
+  },
+  accountDeletion: {
+    title: 'Supprimer un compte AuraPvP', heading: 'Supprimer votre compte', description: 'Comment supprimer un compte AuraPvP et les données associées.',
+    intro: 'Vous pouvez supprimer définitivement votre compte AuraPvP et les données personnelles associées.',
+    note: '<strong>Méthode la plus rapide :</strong> dans l’application, ouvrez Profil → Paramètres → Supprimer le compte et confirmez.',
+    sections: [
+      ['Sans accès à l’application', `Écrivez à ${legalContact} depuis l’adresse utilisée pour AuraPvP avec l’objet « Suppression de compte AuraPvP ». Indiquez uniquement votre nom d’affichage et votre adresse de connexion. Nous pouvons demander une vérification du contrôle du compte ; n’envoyez jamais de mot de passe ni de pièce d’identité sauf nécessité légale expliquée par un canal sécurisé.`],
+      ['Données supprimées', 'Le compte d’authentification, les données privées, le profil, les abonnements à des profils, les jetons push, les défis en attente, les relevés de présence et les votes liés sont supprimés ou anonymisés.'],
+      ['Délais et exceptions', 'La suppression dans l’application commence immédiatement. Les demandes par e-mail sont normalement traitées sous 30 jours. Des données limitées peuvent être conservées si la loi l’exige ou si cela est nécessaire pour prévenir les abus, résoudre les litiges ou protéger l’intégrité de la plateforme, puis supprimées ou anonymisées.'],
+    ],
+  },
+};
 
 const pagePath = (locale, page = 'home') => localeMeta[locale][page];
 const absolute = (locale, page = 'home') => `${origin}${pagePath(locale, page)}`;
