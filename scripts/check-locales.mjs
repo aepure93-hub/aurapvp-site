@@ -5,12 +5,12 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const locales = ['en', 'it', 'es', 'pt', 'de', 'fr'];
 const routes = {
-  en: ['/en/', '/en/privacy/', '/en/cookies/'],
-  it: ['/', '/privacy/', '/cookies/'],
-  es: ['/es/', '/es/privacy/', '/es/cookies/'],
-  pt: ['/pt/', '/pt/privacy/', '/pt/cookies/'],
-  de: ['/de/', '/de/privacy/', '/de/cookies/'],
-  fr: ['/fr/', '/fr/privacy/', '/fr/cookies/'],
+  en: ['/en/', '/en/privacy/', '/en/cookies/', '/en/terms/', '/en/account-deletion/'],
+  it: ['/', '/privacy/', '/cookies/', '/terms/', '/account-deletion/'],
+  es: ['/es/', '/es/privacy/', '/es/cookies/', '/es/terms/', '/es/account-deletion/'],
+  pt: ['/pt/', '/pt/privacy/', '/pt/cookies/', '/pt/terms/', '/pt/account-deletion/'],
+  de: ['/de/', '/de/privacy/', '/de/cookies/', '/de/terms/', '/de/account-deletion/'],
+  fr: ['/fr/', '/fr/privacy/', '/fr/cookies/', '/fr/terms/', '/fr/account-deletion/'],
 };
 
 const failures = [];
@@ -26,12 +26,14 @@ for (const locale of locales) {
     if (!html.includes(`<link rel="canonical" href="https://aurapvp.app${route}">`)) failures.push(`${route}: wrong canonical`);
     const isHome = route === routes[locale][0];
     const hreflangCount = (html.match(/rel="alternate" hreflang=/g) ?? []).length;
-    if (isHome && hreflangCount !== 7) failures.push(`${route}: incomplete hreflang set`);
-    if (!isHome && hreflangCount !== 0) failures.push(`${route}: noindex page should not declare hreflang`);
+    const isCookie = route.includes('/cookies/') || route === '/cookies/';
+    if (!isCookie && hreflangCount !== 7) failures.push(`${route}: incomplete hreflang set`);
+    if (isCookie && hreflangCount !== 0) failures.push(`${route}: noindex page should not declare hreflang`);
     if ((html.match(/data-language="/g) ?? []).length !== 6) failures.push(`${route}: incomplete language picker`);
     if (!/<title>[^<]+<\/title>/.test(html) || !/<meta name="description" content="[^"]+">/.test(html)) failures.push(`${route}: missing search metadata`);
     if (isHome && !html.includes('name="robots" content="index,follow,max-image-preview:large"')) failures.push(`${route}: home must be indexable`);
-    if (!isHome && !html.includes('name="robots" content="noindex,follow"')) failures.push(`${route}: legal page must be noindex`);
+    if (!isHome && !isCookie && !html.includes('name="robots" content="index,follow"')) failures.push(`${route}: public legal page must be indexable`);
+    if (isCookie && !html.includes('name="robots" content="noindex,follow"')) failures.push(`${route}: cookie page must be noindex`);
     if (isHome && !html.includes('twitter:card" content="summary_large_image"')) failures.push(`${route}: missing large social card`);
     if (isHome && !html.includes('og:image:width" content="1200"')) failures.push(`${route}: wrong social image dimensions`);
     const jsonLd = html.match(/<script type="application\/ld\+json">(.+)<\/script>/)?.[1];
@@ -71,5 +73,5 @@ if (failures.length) {
   console.error(failures.join('\n'));
   process.exitCode = 1;
 } else {
-  console.log('Locale checks passed: 18 pages, 6 manifests, reciprocal hreflang, metadata, JSON-LD, sitemap and assets.');
+  console.log('Locale checks passed: 30 pages, 6 manifests, reciprocal hreflang, metadata, JSON-LD, sitemap and assets.');
 }

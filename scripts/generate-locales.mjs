@@ -7,12 +7,12 @@ const origin = 'https://aurapvp.app';
 const locales = ['en', 'it', 'es', 'pt', 'de', 'fr'];
 
 const localeMeta = {
-  en: { name: 'English', flag: '🇬🇧', og: 'en_US', home: '/en/', privacy: '/en/privacy/', cookies: '/en/cookies/' },
-  it: { name: 'Italiano', flag: '🇮🇹', og: 'it_IT', home: '/', privacy: '/privacy/', cookies: '/cookies/' },
-  es: { name: 'Español', flag: '🇪🇸', og: 'es_ES', home: '/es/', privacy: '/es/privacy/', cookies: '/es/cookies/' },
-  pt: { name: 'Português', flag: '🇵🇹', og: 'pt_PT', home: '/pt/', privacy: '/pt/privacy/', cookies: '/pt/cookies/' },
-  de: { name: 'Deutsch', flag: '🇩🇪', og: 'de_DE', home: '/de/', privacy: '/de/privacy/', cookies: '/de/cookies/' },
-  fr: { name: 'Français', flag: '🇫🇷', og: 'fr_FR', home: '/fr/', privacy: '/fr/privacy/', cookies: '/fr/cookies/' },
+  en: { name: 'English', flag: '🇬🇧', og: 'en_US', home: '/en/', privacy: '/en/privacy/', cookies: '/en/cookies/', terms: '/en/terms/', accountDeletion: '/en/account-deletion/' },
+  it: { name: 'Italiano', flag: '🇮🇹', og: 'it_IT', home: '/', privacy: '/privacy/', cookies: '/cookies/', terms: '/terms/', accountDeletion: '/account-deletion/' },
+  es: { name: 'Español', flag: '🇪🇸', og: 'es_ES', home: '/es/', privacy: '/es/privacy/', cookies: '/es/cookies/', terms: '/es/terms/', accountDeletion: '/es/account-deletion/' },
+  pt: { name: 'Português', flag: '🇵🇹', og: 'pt_PT', home: '/pt/', privacy: '/pt/privacy/', cookies: '/pt/cookies/', terms: '/pt/terms/', accountDeletion: '/pt/account-deletion/' },
+  de: { name: 'Deutsch', flag: '🇩🇪', og: 'de_DE', home: '/de/', privacy: '/de/privacy/', cookies: '/de/cookies/', terms: '/de/terms/', accountDeletion: '/de/account-deletion/' },
+  fr: { name: 'Français', flag: '🇫🇷', og: 'fr_FR', home: '/fr/', privacy: '/fr/privacy/', cookies: '/fr/cookies/', terms: '/fr/terms/', accountDeletion: '/fr/account-deletion/' },
 };
 
 const copy = {
@@ -184,6 +184,102 @@ copy.fr = {
   cta: { kicker: 'En développement', title: 'Ton prochain défi ne sera pas derrière un écran.', body: 'AuraPvP est en développement. Ceci n’est que l’entrée de l’arène.', badges: ['Présence réelle', 'Votes vérifiés'] }, footer: { tagline: 'Aura Battles en direct. Présence réelle. Votes vérifiés.', privacy: 'Confidentialité', cookies: 'Cookies', development: 'Produit en développement · International' },
   legal: { siteNotice: 'Informations du site', back: 'Retour à l’accueil', lastUpdated: 'Dernière mise à jour : 3 septembre 2026.', privacy: { title: 'Confidentialité — AuraPvP', description: 'Avis de confidentialité du site d’information AuraPvP.', intro: 'Cet avis concerne uniquement le site d’information <strong>aurapvp.app</strong>. L’application AuraPvP est encore en développement et n’est pas disponible via ce site.', note: '<strong>En bref :</strong> le site ne contient ni comptes, ni formulaires, ni newsletter, ni paiements, ni publicité, ni analyse comportementale.', sections: [['Données collectées directement', 'Le site ne demande ni ne collecte directement votre nom, votre adresse e-mail, votre position ou d’autres données personnelles. Il n’est pas possible de créer un compte ou de participer à un battle depuis ce site.'], ['Données techniques de navigation', 'Comme pour tout site, l’hébergeur et les opérateurs réseau peuvent traiter les données techniques nécessaires à la diffusion des pages et à la protection du service, comme l’adresse IP, la date et l’heure de la demande, le type de navigateur et la ressource demandée. AuraPvP n’utilise pas ces données à des fins de profilage ou de publicité.'], ['Préférence de langue', 'Si vous choisissez une langue, le site enregistre cette préférence localement dans votre navigateur sous le nom <strong>aurapvp-language</strong>. Elle sert uniquement à rouvrir le site dans la langue choisie et n’est pas envoyée à AuraPvP.'], ['Services externes', 'Les pages ne chargent aucune police, vidéo, carte, aucun widget social ni tracker tiers. Le site est publié via GitHub Pages ; le traitement technique associé est régi par les avis du fournisseur.'], ['Confidentialité de l’application', 'Avant le lancement de l’application, un avis séparé et complet sera publié concernant les comptes, les connexions sociales, la vérification de présence pendant les battles, les votes et la conservation des données.'], ['Mises à jour', 'Cette page sera mise à jour si le site ajoute de nouvelles fonctions ou modifie le traitement des données. Dernière mise à jour : 3 septembre 2026.']] }, cookies: { title: 'Cookies — AuraPvP', description: 'Avis relatif aux cookies et au stockage local du site AuraPvP.', intro: 'Le site d’information AuraPvP est conçu pour fonctionner sans suivi et sans bannières intrusives.', note: '<strong>État actuel :</strong> AuraPvP ne dépose aucun cookie de profilage, de publicité ou d’analyse et n’utilise aucune technologie équivalente pour suivre la navigation.', sections: [['Cookies du site', 'Les pages statiques ne déposent aucun cookie AuraPvP. La navigation et les animations fonctionnent localement sans enregistrer d’identifiants dans le navigateur.'], ['Préférence de langue', 'Lorsque vous sélectionnez une langue, le site enregistre son code dans le stockage local du navigateur sous le nom <strong>aurapvp-language</strong>. Cette préférence strictement fonctionnelle n’est pas un cookie, ne vous identifie pas et peut être supprimée en effaçant les données du site.'], ['Hébergeur', 'L’infrastructure qui distribue le site peut utiliser des mécanismes techniques strictement nécessaires à la sécurité et au bon acheminement des demandes. AuraPvP n’accède pas à d’éventuels identifiants à des fins commerciales.'], ['Évolutions futures', 'Si des outils non essentiels sont ajoutés à l’avenir, cet avis sera mis à jour et, lorsque cela est requis, un consentement sera demandé avant leur activation. Dernière mise à jour : 3 septembre 2026.']] } },
 };
+
+const legalContact = '<a href="mailto:info@lentita.com">info@lentita.com</a>';
+const releaseLegal = {
+  en: {
+    labels: { privacy: 'Privacy Policy', terms: 'Terms of Service', accountDeletion: 'Delete your account', cookies: 'Cookies' },
+    privacy: {
+      title: 'Privacy Policy — AuraPvP', heading: 'Privacy Policy', description: 'Privacy policy for the AuraPvP app and website.',
+      intro: 'This policy explains how AuraPvP processes personal data in the mobile app and on <strong>aurapvp.app</strong>.',
+      note: `<strong>Controller:</strong> Alin Daniel Epure, Italy. Contact: ${legalContact}. Last updated: 11 September 2026.`,
+      sections: [
+        ['Data we process', 'Account identifiers supplied by Google or Apple, public profile name and photo, challenge and battle activity, follows, device push token, votes, and location samples used to verify attendance. Payment data is handled by the app stores and RevenueCat only when subscriptions are enabled; AuraPvP does not receive full card details.'],
+        ['Location and votes', 'Precise location is requested only for on-site check-in and presence verification during an active battle, including in the background after a user starts check-in. It is never displayed to other users. Individual votes are not shown publicly; only totals and results are published.'],
+        ['Purposes and legal bases', 'Data is processed to provide the service and enforce its rules, to secure the platform and prevent fraud, to send reminders chosen by the user, and to comply with legal duties. The legal bases are performance of the service contract, legitimate interests in security and fair play, legal obligations, and consent where the law requires it.'],
+        ['Retention', 'Account and profile data remain until deletion. Raw presence samples are kept for up to 30 days; battle, vote-integrity and aggregated attendance records may be kept for up to 24 months to resolve disputes and protect rankings. Push tokens are removed when notifications are disabled, the account is deleted, or the token becomes invalid. Required legal or anti-abuse records may be retained longer in restricted form.'],
+        ['Providers and transfers', 'AuraPvP uses Google Firebase and authentication, Vercel, Expo push services, Apple authentication where available, RevenueCat when subscriptions are enabled, and GitHub Pages for the website. These providers may process data outside the EEA under their contractual safeguards. Data is not sold and is not used for behavioural advertising.'],
+        ['Your choices and rights', `You can disable notifications and location permissions in device settings, and delete the account inside the app. You may also use the <a href="${localeMeta.en.accountDeletion}">web deletion procedure</a>. For access, correction, deletion, restriction, portability or objection, contact ${legalContact}. You may complain to your data-protection authority.`],
+        ['Children and safety', 'AuraPvP is not directed to children under 16. Users must meet the minimum age required in their country and follow local rules for public events.'],
+      ],
+    },
+    terms: {
+      title: 'Terms of Service — AuraPvP', heading: 'Terms of Service', description: 'Terms governing use of AuraPvP.',
+      intro: 'These terms govern use of the AuraPvP app and services. By creating an account, you agree to them.',
+      note: `<strong>Provider:</strong> Alin Daniel Epure, Italy. Contact: ${legalContact}. Effective: 11 September 2026.`,
+      sections: [
+        ['Eligibility', 'You must be at least 16 and legally able to accept these terms. If local law requires parental permission, you must obtain it before using AuraPvP.'],
+        ['Safe and lawful use', 'Battles must take place lawfully in safe, recognized public places. No violence, harassment, threats, dangerous acts, trespass, private-home events, impersonation, cheating, location spoofing or vote manipulation is allowed. AuraPvP is not an organizer, referee or emergency service.'],
+        ['Accounts and content', 'Keep your account secure and provide accurate information. You remain responsible for content and challenges you create and grant AuraPvP the limited rights needed to host and display them. Report unlawful or unsafe activity and leave any situation that feels unsafe.'],
+        ['Battles and rankings', 'Check-in, presence, audience and vote thresholds determine whether a battle affects rankings. A vote is final and publicly anonymous. AuraPvP may invalidate results, restrict features or suspend accounts when rules or integrity controls are breached.'],
+        ['Availability and changes', 'The service may change, be interrupted or contain errors. Features may be added or removed, with reasonable notice for material changes. The free MVP does not guarantee continuous availability or any ranking, reward or commercial value.'],
+        ['Liability and termination', 'Nothing excludes liability that cannot legally be excluded. To the extent permitted by law, AuraPvP is not liable for user-organized meetings, conduct of other users or indirect losses. You may stop using the service and delete your account at any time; AuraPvP may suspend serious or repeated violations. Italian law applies without removing mandatory consumer protections in your country.'],
+      ],
+    },
+    accountDeletion: {
+      title: 'Delete your AuraPvP account', heading: 'Delete your account', description: 'How to delete an AuraPvP account and associated data.',
+      intro: 'You can permanently delete your AuraPvP account and associated personal data.',
+      note: '<strong>Fastest method:</strong> in the app open Profile → Settings → Delete account and confirm.',
+      sections: [
+        ['Without access to the app', `Email ${legalContact} from the address used for your AuraPvP account with the subject “AuraPvP account deletion”. Include only your display name and sign-in email. We may ask you to verify control of the account; never send passwords or identity documents unless a lawful need is explained through a secure channel.`],
+        ['What is deleted', 'Authentication account, private account data, profile, follows, push tokens, pending challenges, presence records and votes linked to the account are deleted or anonymized.'],
+        ['Timing and exceptions', 'In-app deletion starts immediately. Email requests are normally completed within 30 days. Limited records may be retained where required by law or necessary to prevent abuse, resolve disputes or protect platform integrity, then deleted or anonymized when no longer needed.'],
+      ],
+    },
+  },
+  it: {
+    labels: { privacy: 'Privacy Policy', terms: 'Termini di servizio', accountDeletion: 'Elimina account', cookies: 'Cookie' },
+    privacy: {
+      title: 'Privacy Policy — AuraPvP', heading: 'Privacy Policy', description: 'Informativa privacy dell’app e del sito AuraPvP.',
+      intro: 'Questa informativa spiega come AuraPvP tratta i dati personali nell’app mobile e su <strong>aurapvp.app</strong>.',
+      note: `<strong>Titolare:</strong> Alin Daniel Epure, Italia. Contatto: ${legalContact}. Ultimo aggiornamento: 11 settembre 2026.`,
+      sections: [
+        ['Dati trattati', 'Identificativi account forniti da Google o Apple, nome e foto del profilo pubblico, sfide e battaglie, follow, token push del dispositivo, voti e campioni di posizione usati per verificare la presenza. I dati di pagamento sono gestiti dagli Store e da RevenueCat soltanto quando gli abbonamenti sono attivi; AuraPvP non riceve i dati completi della carta.'],
+        ['Posizione e voti', 'La posizione precisa è richiesta soltanto per il check-in e la verifica della presenza durante una battaglia attiva, anche in background dopo che l’utente avvia il check-in. Non viene mostrata ad altri utenti. I singoli voti non sono pubblici: vengono mostrati soltanto totali e risultati.'],
+        ['Finalità e basi giuridiche', 'I dati servono a fornire il servizio e applicarne le regole, proteggere la piattaforma e prevenire frodi, inviare i promemoria scelti dall’utente e rispettare obblighi di legge. Le basi giuridiche sono l’esecuzione del servizio, il legittimo interesse alla sicurezza e al fair play, gli obblighi legali e il consenso quando richiesto.'],
+        ['Conservazione', 'Account e profilo restano fino alla cancellazione. I campioni grezzi di presenza sono conservati fino a 30 giorni; dati di battaglia, integrità del voto e presenza aggregata fino a 24 mesi per contestazioni e tutela delle classifiche. I token push vengono rimossi disattivando le notifiche, eliminando l’account o quando non sono più validi. Eventuali dati necessari per legge o antifrode possono essere conservati più a lungo in forma limitata.'],
+        ['Fornitori e trasferimenti', 'AuraPvP usa Google Firebase e autenticazione, Vercel, servizi push Expo, autenticazione Apple dove disponibile, RevenueCat quando gli abbonamenti sono attivi e GitHub Pages per il sito. I fornitori possono trattare dati fuori dallo SEE con le proprie garanzie contrattuali. I dati non vengono venduti né usati per pubblicità comportamentale.'],
+        ['Scelte e diritti', `Puoi disattivare notifiche e posizione dalle impostazioni del dispositivo ed eliminare l’account nell’app. Puoi anche usare la <a href="${localeMeta.it.accountDeletion}">procedura web</a>. Per accesso, rettifica, cancellazione, limitazione, portabilità o opposizione, scrivi a ${legalContact}. Puoi proporre reclamo al Garante per la protezione dei dati personali.`],
+        ['Minori e sicurezza', 'AuraPvP non è destinata a minori di 16 anni. L’utente deve rispettare l’età minima prevista nel proprio Paese e le regole locali per gli eventi in luoghi pubblici.'],
+      ],
+    },
+    terms: {
+      title: 'Termini di servizio — AuraPvP', heading: 'Termini di servizio', description: 'Condizioni d’uso di AuraPvP.',
+      intro: 'Questi termini regolano l’uso dell’app e dei servizi AuraPvP. Creando un account li accetti.',
+      note: `<strong>Fornitore:</strong> Alin Daniel Epure, Italia. Contatto: ${legalContact}. In vigore dall’11 settembre 2026.`,
+      sections: [
+        ['Requisiti', 'Devi avere almeno 16 anni e la capacità giuridica di accettare questi termini. Se la legge locale richiede il consenso dei genitori, devi ottenerlo prima di usare AuraPvP.'],
+        ['Uso sicuro e legale', 'Le battaglie devono svolgersi legalmente in luoghi pubblici riconosciuti e sicuri. Sono vietati violenza, molestie, minacce, azioni pericolose, accessi abusivi, eventi in abitazioni private, impersonificazione, cheating, falsificazione della posizione e manipolazione dei voti. AuraPvP non è organizzatore, arbitro o servizio di emergenza.'],
+        ['Account e contenuti', 'Proteggi l’account e fornisci informazioni corrette. Resti responsabile dei contenuti e delle sfide che crei e concedi ad AuraPvP i soli diritti necessari a ospitarli e mostrarli. Segnala attività illegali o pericolose e allontanati da situazioni non sicure.'],
+        ['Battaglie e classifiche', 'Check-in, presenza, pubblico e soglie di voto determinano se una battaglia incide sulle classifiche. Il voto è definitivo e pubblicamente anonimo. AuraPvP può invalidare risultati, limitare funzioni o sospendere account in caso di violazioni o anomalie.'],
+        ['Disponibilità e modifiche', 'Il servizio può cambiare, subire interruzioni o contenere errori. Le funzioni possono essere aggiunte o rimosse con un preavviso ragionevole per le modifiche rilevanti. L’MVP gratuito non garantisce disponibilità continua né valore economico di rating o risultati.'],
+        ['Responsabilità e cessazione', 'Restano ferme le responsabilità inderogabili per legge. Nei limiti consentiti, AuraPvP non risponde degli incontri organizzati dagli utenti, della condotta altrui o di danni indiretti. Puoi interrompere l’uso ed eliminare l’account in ogni momento; AuraPvP può sospendere violazioni gravi o ripetute. Si applica la legge italiana senza limitare le tutele obbligatorie del consumatore.'],
+      ],
+    },
+    accountDeletion: {
+      title: 'Elimina account AuraPvP', heading: 'Elimina il tuo account', description: 'Come eliminare un account AuraPvP e i dati associati.',
+      intro: 'Puoi eliminare definitivamente l’account AuraPvP e i dati personali associati.',
+      note: '<strong>Metodo più rapido:</strong> nell’app apri Profilo → Impostazioni → Elimina account e conferma.',
+      sections: [
+        ['Senza accesso all’app', `Scrivi a ${legalContact} dall’indirizzo usato per AuraPvP con oggetto “Cancellazione account AuraPvP”. Indica soltanto nome visualizzato ed email di accesso. Potremmo chiederti di verificare il controllo dell’account; non inviare password o documenti salvo necessità legale spiegata tramite un canale sicuro.`],
+        ['Dati eliminati', 'Account di autenticazione, dati privati, profilo, follow, token push, sfide pendenti, registri di presenza e voti collegati vengono eliminati o anonimizzati.'],
+        ['Tempi ed eccezioni', 'La cancellazione nell’app parte subito. Le richieste email vengono normalmente completate entro 30 giorni. Dati limitati possono essere conservati quando richiesto dalla legge o necessario per prevenire abusi, risolvere contestazioni o proteggere l’integrità della piattaforma, poi eliminati o anonimizzati.'],
+      ],
+    },
+  },
+};
+
+for (const locale of ['es', 'pt', 'de', 'fr']) {
+  releaseLegal[locale] = {
+    ...releaseLegal.en,
+    labels: {
+      es: { privacy: 'Política de privacidad', terms: 'Términos del servicio', accountDeletion: 'Eliminar cuenta', cookies: 'Cookies' },
+      pt: { privacy: 'Política de Privacidade', terms: 'Termos de Serviço', accountDeletion: 'Eliminar conta', cookies: 'Cookies' },
+      de: { privacy: 'Datenschutzerklärung', terms: 'Nutzungsbedingungen', accountDeletion: 'Konto löschen', cookies: 'Cookies' },
+      fr: { privacy: 'Politique de confidentialité', terms: 'Conditions d’utilisation', accountDeletion: 'Supprimer le compte', cookies: 'Cookies' },
+    }[locale],
+  };
+}
 
 const pagePath = (locale, page = 'home') => localeMeta[locale][page];
 const absolute = (locale, page = 'home') => `${origin}${pagePath(locale, page)}`;
@@ -405,7 +501,7 @@ ${plan('Pro', c.plans.proPrice, c.plans.perMonth, c.plans.proBody, c.plans.proFe
     <section class="final-cta" id="in-arrivo"><div class="cta-grid" aria-hidden="true"></div><div class="container cta-content reveal"><img class="cta-brand-icon" src="/assets/aurapvp-real-world-pvp-app-icon-512.png" width="512" height="512" alt="" loading="lazy" decoding="async"><span class="section-kicker">${c.cta.kicker}</span><h2>${c.cta.title}</h2><p>${c.cta.body}</p><div class="coming-platforms" aria-label="AuraPvP"><span>${c.cta.badges[0]}</span><i></i><span>${c.cta.badges[1]}</span></div></div></section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-top"><a class="brand brand--wordmark" href="#top" aria-label="AuraPvP"><img class="brand-logo brand-logo--wordmark" src="/assets/aurapvp-live-pvp-wordmark.png" width="563" height="108" alt="AuraPvP"></a><p>${c.footer.tagline}</p><nav aria-label="${c.legal.siteNotice}"><a href="${pagePath(locale, 'privacy')}">${c.footer.privacy}</a><a href="${pagePath(locale, 'cookies')}">${c.footer.cookies}</a></nav></div><div class="container footer-bottom"><span>© <span data-year></span> AuraPvP</span><span>${c.footer.development}</span></div></footer>
+  <footer class="site-footer"><div class="container footer-top"><a class="brand brand--wordmark" href="#top" aria-label="AuraPvP"><img class="brand-logo brand-logo--wordmark" src="/assets/aurapvp-live-pvp-wordmark.png" width="563" height="108" alt="AuraPvP"></a><p>${c.footer.tagline}</p><nav aria-label="${c.legal.siteNotice}"><a href="${pagePath(locale, 'privacy')}">${releaseLegal[locale].labels.privacy}</a><a href="${pagePath(locale, 'terms')}">${releaseLegal[locale].labels.terms}</a><a href="${pagePath(locale, 'accountDeletion')}">${releaseLegal[locale].labels.accountDeletion}</a><a href="${pagePath(locale, 'cookies')}">${releaseLegal[locale].labels.cookies}</a></nav></div><div class="container footer-bottom"><span>© <span data-year></span> AuraPvP</span><span>${c.footer.development}</span></div></footer>
 </body>
 </html>
 `;
@@ -413,21 +509,22 @@ ${plan('Pro', c.plans.proPrice, c.plans.perMonth, c.plans.proBody, c.plans.proFe
 
 function renderLegal(locale, type) {
   const c = copy[locale];
-  const page = c.legal[type];
-  const otherType = type === 'privacy' ? 'cookies' : 'privacy';
+  const page = type === 'cookies' ? c.legal.cookies : releaseLegal[locale][type];
+  const heading = page.heading ?? c.footer.cookies;
   const autoRedirect = locale === 'it' ? '\n  <script src="/locale-redirect.js" defer></script>' : '';
+  const publicLegal = type !== 'cookies';
   return `<!doctype html>
 <html lang="${locale}">
 <head>
-${sharedHead(locale, type, page.title, page.description, c.seo.imageAlt, { robots: 'noindex,follow', alternates: false })}
+${sharedHead(locale, type, page.title, page.description, c.seo.imageAlt, { robots: publicLegal ? 'index,follow' : 'noindex,follow', alternates: publicLegal })}
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/legal.css">
   <script src="/script.js" defer></script>${autoRedirect}
 </head>
 <body class="legal-page">
   <header class="legal-header"><div class="container nav-wrap"><a class="brand brand--horizontal" href="${pagePath(locale)}" aria-label="${c.ui.homeAria}"><img class="brand-logo brand-logo--horizontal" src="/assets/aurapvp-live-aura-battle-horizontal-logo.png" width="950" height="249" alt="${c.seo.imageAlt}"></a><div class="legal-actions">${languagePicker(locale, type)}<a class="back-link" href="${pagePath(locale)}">← ${c.legal.back}</a></div></div></header>
-  <main class="legal-main"><span class="section-kicker">${c.legal.siteNotice}</span><h1>${type === 'privacy' ? c.footer.privacy : c.footer.cookies}</h1><p class="legal-intro">${page.intro}</p><p class="legal-note">${page.note}</p>${page.sections.map(([title, body]) => `<section><h2>${title}</h2><p>${body}</p></section>`).join('\n    ')}</main>
-  <footer class="legal-footer"><div class="container"><span>© <span data-year></span> AuraPvP</span><a href="${pagePath(locale, otherType)}">${type === 'privacy' ? c.footer.cookies : c.footer.privacy}</a></div></footer>
+  <main class="legal-main"><span class="section-kicker">${c.legal.siteNotice}</span><h1>${heading}</h1><p class="legal-intro">${page.intro}</p><p class="legal-note">${page.note}</p>${page.sections.map(([title, body]) => `<section><h2>${title}</h2><p>${body}</p></section>`).join('\n    ')}</main>
+  <footer class="legal-footer"><div class="container"><span>© <span data-year></span> AuraPvP</span><a href="${pagePath(locale, 'privacy')}">${releaseLegal[locale].labels.privacy}</a><a href="${pagePath(locale, 'terms')}">${releaseLegal[locale].labels.terms}</a><a href="${pagePath(locale, 'accountDeletion')}">${releaseLegal[locale].labels.accountDeletion}</a><a href="${pagePath(locale, 'cookies')}">${releaseLegal[locale].labels.cookies}</a></div></footer>
 </body>
 </html>
 `;
@@ -485,6 +582,8 @@ for (const locale of locales) {
   await writeRoute(pagePath(locale), renderHome(locale));
   await writeRoute(pagePath(locale, 'privacy'), renderLegal(locale, 'privacy'));
   await writeRoute(pagePath(locale, 'cookies'), renderLegal(locale, 'cookies'));
+  await writeRoute(pagePath(locale, 'terms'), renderLegal(locale, 'terms'));
+  await writeRoute(pagePath(locale, 'accountDeletion'), renderLegal(locale, 'accountDeletion'));
   const manifestTarget = path.join(root, manifestPath(locale).replace(/^\//, ''));
   await mkdir(path.dirname(manifestTarget), { recursive: true });
   await writeFile(manifestTarget, renderManifest(locale), 'utf8');
@@ -493,4 +592,4 @@ for (const locale of locales) {
 await writeFile(path.join(root, 'sitemap.xml'), renderSitemap(), 'utf8');
 await writeFile(path.join(root, '404.html'), render404(), 'utf8');
 
-console.log(`Generated ${locales.length * 3} localized pages, ${locales.length} manifests, sitemap and 404 page.`);
+console.log(`Generated ${locales.length * 5} localized pages, ${locales.length} manifests, sitemap and 404 page.`);
